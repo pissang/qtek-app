@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.15/require.min.js"></script>
+    <style>
+        html, body, #main {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="main"></div>
+    <script src="../js/config.js"></script>
+    <script>
+        require(['qtek-app/App3D', 'skinning.world'], function (App3D, world) {
+            var app = new App3D();
+            app.init(document.getElementById('main'));
+            app.loadWorld(world);
+
+            window.addEventListener('resize', function () {
+                app.resize();
+            });
+        });
+    </script>
+</body>
+</html>

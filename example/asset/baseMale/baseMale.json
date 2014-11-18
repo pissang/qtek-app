@@ -1,0 +1,4451 @@
+{
+    "accessors": {
+        "accessor_10": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 960,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_100": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 30480,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_101": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 30840,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_102": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 31320,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_103": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 31680,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_104": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 31800,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_105": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 32160,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_106": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 32640,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_107": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 33000,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_108": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 33120,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_109": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 33480,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_11": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 1320,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_110": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 33960,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_111": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 34320,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_112": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 34440,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_113": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 34800,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_114": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 35280,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_115": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 35640,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_116": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 35760,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_117": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 36120,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_118": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 36600,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_119": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 36960,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_12": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 1440,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_120": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 37080,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_121": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 37440,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_122": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 37920,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_123": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 38280,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_124": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 38400,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_125": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 38760,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_126": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 39240,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_127": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 39600,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_128": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 39720,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_129": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 40080,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_13": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 1800,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_130": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 40560,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_131": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 40920,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_132": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 41040,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_133": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 41400,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_134": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 41880,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_135": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 42240,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_136": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 42360,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_137": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 42720,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_138": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 43200,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_139": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 43560,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_14": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 2280,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_140": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 43680,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_141": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 44040,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_142": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 44520,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_143": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 44880,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_144": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 45000,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_145": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 45360,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_146": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 45840,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_147": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 46200,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_148": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 46320,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_149": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 46680,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_15": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 2640,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_150": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 47160,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_151": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 47520,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_152": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 47640,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_153": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 48000,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_154": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 48480,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_155": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 48840,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_156": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 48960,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_157": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 49320,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_158": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 49800,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_159": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 50160,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_16": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 2760,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_160": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 50280,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_161": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 50640,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_162": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 51120,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_163": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 51480,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_164": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 51600,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_165": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 51960,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_166": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 52440,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_167": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 52800,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_168": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 52920,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_169": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 53280,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_17": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 3120,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_170": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 53760,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_171": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 54120,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_172": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 54240,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_173": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 54600,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_174": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 55080,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_18": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 3600,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_19": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 3960,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_20": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 4080,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_21": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 4440,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_22": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 4920,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_23": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 5280,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_24": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 5400,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_25": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 5760,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_26": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 6240,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_27": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 6600,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_28": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 6720,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_29": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 7080,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_30": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 7560,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_31": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 7920,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_32": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 8040,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_33": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 8400,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_34": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 8880,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_35": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 9240,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_36": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 9360,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_37": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 9720,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_38": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 10200,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_39": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 10560,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_40": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 10680,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_41": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 11040,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_42": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 11520,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_43": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 11880,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_44": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 12000,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_45": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 12360,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_46": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 12840,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_47": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 13200,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_48": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 13320,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_49": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 13680,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_50": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 14160,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_51": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 14520,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_52": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 14640,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_53": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 15000,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_54": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 15480,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_55": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 15840,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_56": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 15960,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_57": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 16320,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_58": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 16800,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_59": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 17160,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_60": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 17280,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_61": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 17640,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_62": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 18120,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_63": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 18480,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_64": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 18600,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_65": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 18960,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_66": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 19440,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_67": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 19800,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_68": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 19920,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_69": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 20280,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_7": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 0,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_70": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 20760,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_71": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 21120,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_72": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 21240,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_73": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 21600,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_74": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 22080,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_75": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 22440,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_76": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 22560,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_77": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 22920,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_78": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 23400,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_79": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 23760,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_8": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 120,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_80": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 23880,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_81": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 24240,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_82": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 24720,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_83": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 25080,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_84": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 25200,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_85": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 25560,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_86": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 26040,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_87": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 26400,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_88": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 26520,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_89": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 26880,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_9": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 480,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_90": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 27360,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_91": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 27720,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_92": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 27840,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_93": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 28200,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_94": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 28680,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_95": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 29040,
+            "count": 30,
+            "type": 5126
+        },
+        "accessor_96": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 29160,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_97": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 29520,
+            "count": 30,
+            "type": 35666
+        },
+        "accessor_98": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 30000,
+            "count": 30,
+            "type": 35665
+        },
+        "accessor_99": {
+            "bufferView": "bufferView_177",
+            "byteOffset": 30360,
+            "count": 30,
+            "type": 5126
+        },
+        "attrbute_1": {
+            "bufferView": "bufferView_175",
+            "byteOffset": 0,
+            "byteStride": 12,
+            "count": 3423,
+            "max": [
+                105.03279876708984,
+                17.9414005279541,
+                189.89088439941406,
+                0.0
+            ],
+            "min": [
+                -105.03279876708984,
+                -22.829500198364258,
+                -0.8008001446723938,
+                0.0
+            ],
+            "type": 35665
+        },
+        "attrbute_2": {
+            "bufferView": "bufferView_175",
+            "byteOffset": 41076,
+            "byteStride": 12,
+            "count": 3423,
+            "max": [
+                0.998151957988739,
+                0.9995329976081848,
+                0.9956503510475159,
+                0.0
+            ],
+            "min": [
+                -0.998150110244751,
+                -0.9999364614486694,
+                -0.9990407228469849,
+                0.0
+            ],
+            "type": 35665
+        },
+        "attrbute_3": {
+            "bufferView": "bufferView_175",
+            "byteOffset": 82152,
+            "byteStride": 8,
+            "count": 3423,
+            "max": [
+                1.982300043106079,
+                0.9453999996185303
+            ],
+            "min": [
+                0.015399999916553497,
+                0.015399999916553497
+            ],
+            "type": 35664
+        },
+        "attrbute_4": {
+            "bufferView": "bufferView_175",
+            "byteOffset": 109536,
+            "byteStride": 16,
+            "count": 3423,
+            "max": [
+                40,
+                40,
+                37,
+                34
+            ],
+            "min": [
+                0,
+                -1,
+                -1,
+                -1
+            ],
+            "type": 35666
+        },
+        "attrbute_5": {
+            "bufferView": "bufferView_175",
+            "byteOffset": 164304,
+            "byteStride": 12,
+            "count": 3423,
+            "max": [
+                1.0,
+                0.9998962879180908,
+                0.9913051128387451
+            ],
+            "min": [
+                0.00010371189273428172,
+                0,
+                0
+            ],
+            "type": 35665
+        },
+        "indices_6": {
+            "bufferView": "bufferView_178",
+            "byteOffset": 0,
+            "count": 17634,
+            "type": 5123
+        }
+    },
+    "animations": {
+        "animation_0": {
+            "channels": [
+                {
+                    "sampler": "animation_0_rotation_sampler",
+                    "target": {
+                        "id": "Bip01",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_0_scale_sampler",
+                    "target": {
+                        "id": "Bip01",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_0_translation_sampler",
+                    "target": {
+                        "id": "Bip01",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_7",
+                "rotation": "accessor_9",
+                "scale": "accessor_10",
+                "translation": "accessor_8"
+            },
+            "samplers": {
+                "animation_0_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_0_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_0_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_1": {
+            "channels": [
+                {
+                    "sampler": "animation_1_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 Pelvis",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_1_scale_sampler",
+                    "target": {
+                        "id": "Bip01 Pelvis",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_1_translation_sampler",
+                    "target": {
+                        "id": "Bip01 Pelvis",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_11",
+                "rotation": "accessor_13",
+                "scale": "accessor_14",
+                "translation": "accessor_12"
+            },
+            "samplers": {
+                "animation_1_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_1_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_1_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_10": {
+            "channels": [
+                {
+                    "sampler": "animation_10_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Toe0",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_10_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Toe0",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_10_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Toe0",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_47",
+                "rotation": "accessor_49",
+                "scale": "accessor_50",
+                "translation": "accessor_48"
+            },
+            "samplers": {
+                "animation_10_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_10_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_10_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_11": {
+            "channels": [
+                {
+                    "sampler": "animation_11_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 Spine1",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_11_scale_sampler",
+                    "target": {
+                        "id": "Bip01 Spine1",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_11_translation_sampler",
+                    "target": {
+                        "id": "Bip01 Spine1",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_51",
+                "rotation": "accessor_53",
+                "scale": "accessor_54",
+                "translation": "accessor_52"
+            },
+            "samplers": {
+                "animation_11_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_11_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_11_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_12": {
+            "channels": [
+                {
+                    "sampler": "animation_12_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 Neck",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_12_scale_sampler",
+                    "target": {
+                        "id": "Bip01 Neck",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_12_translation_sampler",
+                    "target": {
+                        "id": "Bip01 Neck",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_55",
+                "rotation": "accessor_57",
+                "scale": "accessor_58",
+                "translation": "accessor_56"
+            },
+            "samplers": {
+                "animation_12_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_12_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_12_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_13": {
+            "channels": [
+                {
+                    "sampler": "animation_13_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 Head",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_13_scale_sampler",
+                    "target": {
+                        "id": "Bip01 Head",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_13_translation_sampler",
+                    "target": {
+                        "id": "Bip01 Head",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_59",
+                "rotation": "accessor_61",
+                "scale": "accessor_62",
+                "translation": "accessor_60"
+            },
+            "samplers": {
+                "animation_13_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_13_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_13_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_14": {
+            "channels": [
+                {
+                    "sampler": "animation_14_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Clavicle",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_14_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Clavicle",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_14_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Clavicle",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_63",
+                "rotation": "accessor_65",
+                "scale": "accessor_66",
+                "translation": "accessor_64"
+            },
+            "samplers": {
+                "animation_14_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_14_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_14_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_15": {
+            "channels": [
+                {
+                    "sampler": "animation_15_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R UpperArm",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_15_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R UpperArm",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_15_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R UpperArm",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_67",
+                "rotation": "accessor_69",
+                "scale": "accessor_70",
+                "translation": "accessor_68"
+            },
+            "samplers": {
+                "animation_15_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_15_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_15_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_16": {
+            "channels": [
+                {
+                    "sampler": "animation_16_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Forearm",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_16_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Forearm",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_16_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Forearm",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_71",
+                "rotation": "accessor_73",
+                "scale": "accessor_74",
+                "translation": "accessor_72"
+            },
+            "samplers": {
+                "animation_16_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_16_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_16_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_17": {
+            "channels": [
+                {
+                    "sampler": "animation_17_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Hand",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_17_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Hand",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_17_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Hand",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_75",
+                "rotation": "accessor_77",
+                "scale": "accessor_78",
+                "translation": "accessor_76"
+            },
+            "samplers": {
+                "animation_17_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_17_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_17_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_18": {
+            "channels": [
+                {
+                    "sampler": "animation_18_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger0",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_18_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger0",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_18_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger0",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_79",
+                "rotation": "accessor_81",
+                "scale": "accessor_82",
+                "translation": "accessor_80"
+            },
+            "samplers": {
+                "animation_18_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_18_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_18_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_19": {
+            "channels": [
+                {
+                    "sampler": "animation_19_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger01",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_19_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger01",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_19_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger01",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_83",
+                "rotation": "accessor_85",
+                "scale": "accessor_86",
+                "translation": "accessor_84"
+            },
+            "samplers": {
+                "animation_19_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_19_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_19_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_2": {
+            "channels": [
+                {
+                    "sampler": "animation_2_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 Spine",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_2_scale_sampler",
+                    "target": {
+                        "id": "Bip01 Spine",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_2_translation_sampler",
+                    "target": {
+                        "id": "Bip01 Spine",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_15",
+                "rotation": "accessor_17",
+                "scale": "accessor_18",
+                "translation": "accessor_16"
+            },
+            "samplers": {
+                "animation_2_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_2_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_2_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_20": {
+            "channels": [
+                {
+                    "sampler": "animation_20_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger1",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_20_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger1",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_20_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger1",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_87",
+                "rotation": "accessor_89",
+                "scale": "accessor_90",
+                "translation": "accessor_88"
+            },
+            "samplers": {
+                "animation_20_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_20_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_20_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_21": {
+            "channels": [
+                {
+                    "sampler": "animation_21_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger11",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_21_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger11",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_21_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger11",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_91",
+                "rotation": "accessor_93",
+                "scale": "accessor_94",
+                "translation": "accessor_92"
+            },
+            "samplers": {
+                "animation_21_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_21_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_21_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_22": {
+            "channels": [
+                {
+                    "sampler": "animation_22_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger2",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_22_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger2",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_22_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger2",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_95",
+                "rotation": "accessor_97",
+                "scale": "accessor_98",
+                "translation": "accessor_96"
+            },
+            "samplers": {
+                "animation_22_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_22_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_22_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_23": {
+            "channels": [
+                {
+                    "sampler": "animation_23_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger21",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_23_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger21",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_23_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger21",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_99",
+                "rotation": "accessor_101",
+                "scale": "accessor_102",
+                "translation": "accessor_100"
+            },
+            "samplers": {
+                "animation_23_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_23_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_23_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_24": {
+            "channels": [
+                {
+                    "sampler": "animation_24_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger3",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_24_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger3",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_24_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger3",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_103",
+                "rotation": "accessor_105",
+                "scale": "accessor_106",
+                "translation": "accessor_104"
+            },
+            "samplers": {
+                "animation_24_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_24_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_24_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_25": {
+            "channels": [
+                {
+                    "sampler": "animation_25_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger31",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_25_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger31",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_25_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger31",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_107",
+                "rotation": "accessor_109",
+                "scale": "accessor_110",
+                "translation": "accessor_108"
+            },
+            "samplers": {
+                "animation_25_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_25_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_25_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_26": {
+            "channels": [
+                {
+                    "sampler": "animation_26_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger4",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_26_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger4",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_26_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger4",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_111",
+                "rotation": "accessor_113",
+                "scale": "accessor_114",
+                "translation": "accessor_112"
+            },
+            "samplers": {
+                "animation_26_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_26_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_26_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_27": {
+            "channels": [
+                {
+                    "sampler": "animation_27_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger41",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_27_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger41",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_27_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Finger41",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_115",
+                "rotation": "accessor_117",
+                "scale": "accessor_118",
+                "translation": "accessor_116"
+            },
+            "samplers": {
+                "animation_27_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_27_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_27_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_28": {
+            "channels": [
+                {
+                    "sampler": "animation_28_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Clavicle",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_28_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Clavicle",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_28_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Clavicle",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_119",
+                "rotation": "accessor_121",
+                "scale": "accessor_122",
+                "translation": "accessor_120"
+            },
+            "samplers": {
+                "animation_28_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_28_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_28_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_29": {
+            "channels": [
+                {
+                    "sampler": "animation_29_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L UpperArm",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_29_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L UpperArm",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_29_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L UpperArm",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_123",
+                "rotation": "accessor_125",
+                "scale": "accessor_126",
+                "translation": "accessor_124"
+            },
+            "samplers": {
+                "animation_29_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_29_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_29_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_3": {
+            "channels": [
+                {
+                    "sampler": "animation_3_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Thigh",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_3_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Thigh",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_3_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Thigh",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_19",
+                "rotation": "accessor_21",
+                "scale": "accessor_22",
+                "translation": "accessor_20"
+            },
+            "samplers": {
+                "animation_3_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_3_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_3_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_30": {
+            "channels": [
+                {
+                    "sampler": "animation_30_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Forearm",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_30_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Forearm",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_30_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Forearm",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_127",
+                "rotation": "accessor_129",
+                "scale": "accessor_130",
+                "translation": "accessor_128"
+            },
+            "samplers": {
+                "animation_30_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_30_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_30_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_31": {
+            "channels": [
+                {
+                    "sampler": "animation_31_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Hand",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_31_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Hand",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_31_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Hand",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_131",
+                "rotation": "accessor_133",
+                "scale": "accessor_134",
+                "translation": "accessor_132"
+            },
+            "samplers": {
+                "animation_31_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_31_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_31_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_32": {
+            "channels": [
+                {
+                    "sampler": "animation_32_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger0",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_32_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger0",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_32_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger0",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_135",
+                "rotation": "accessor_137",
+                "scale": "accessor_138",
+                "translation": "accessor_136"
+            },
+            "samplers": {
+                "animation_32_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_32_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_32_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_33": {
+            "channels": [
+                {
+                    "sampler": "animation_33_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger01",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_33_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger01",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_33_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger01",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_139",
+                "rotation": "accessor_141",
+                "scale": "accessor_142",
+                "translation": "accessor_140"
+            },
+            "samplers": {
+                "animation_33_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_33_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_33_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_34": {
+            "channels": [
+                {
+                    "sampler": "animation_34_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger1",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_34_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger1",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_34_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger1",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_143",
+                "rotation": "accessor_145",
+                "scale": "accessor_146",
+                "translation": "accessor_144"
+            },
+            "samplers": {
+                "animation_34_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_34_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_34_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_35": {
+            "channels": [
+                {
+                    "sampler": "animation_35_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger11",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_35_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger11",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_35_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger11",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_147",
+                "rotation": "accessor_149",
+                "scale": "accessor_150",
+                "translation": "accessor_148"
+            },
+            "samplers": {
+                "animation_35_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_35_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_35_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_36": {
+            "channels": [
+                {
+                    "sampler": "animation_36_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger2",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_36_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger2",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_36_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger2",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_151",
+                "rotation": "accessor_153",
+                "scale": "accessor_154",
+                "translation": "accessor_152"
+            },
+            "samplers": {
+                "animation_36_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_36_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_36_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_37": {
+            "channels": [
+                {
+                    "sampler": "animation_37_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger21",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_37_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger21",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_37_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger21",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_155",
+                "rotation": "accessor_157",
+                "scale": "accessor_158",
+                "translation": "accessor_156"
+            },
+            "samplers": {
+                "animation_37_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_37_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_37_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_38": {
+            "channels": [
+                {
+                    "sampler": "animation_38_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger3",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_38_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger3",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_38_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger3",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_159",
+                "rotation": "accessor_161",
+                "scale": "accessor_162",
+                "translation": "accessor_160"
+            },
+            "samplers": {
+                "animation_38_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_38_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_38_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_39": {
+            "channels": [
+                {
+                    "sampler": "animation_39_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger31",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_39_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger31",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_39_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger31",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_163",
+                "rotation": "accessor_165",
+                "scale": "accessor_166",
+                "translation": "accessor_164"
+            },
+            "samplers": {
+                "animation_39_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_39_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_39_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_4": {
+            "channels": [
+                {
+                    "sampler": "animation_4_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Calf",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_4_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Calf",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_4_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Calf",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_23",
+                "rotation": "accessor_25",
+                "scale": "accessor_26",
+                "translation": "accessor_24"
+            },
+            "samplers": {
+                "animation_4_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_4_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_4_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_40": {
+            "channels": [
+                {
+                    "sampler": "animation_40_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger4",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_40_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger4",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_40_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger4",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_167",
+                "rotation": "accessor_169",
+                "scale": "accessor_170",
+                "translation": "accessor_168"
+            },
+            "samplers": {
+                "animation_40_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_40_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_40_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_41": {
+            "channels": [
+                {
+                    "sampler": "animation_41_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger41",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_41_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger41",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_41_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Finger41",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_171",
+                "rotation": "accessor_173",
+                "scale": "accessor_174",
+                "translation": "accessor_172"
+            },
+            "samplers": {
+                "animation_41_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_41_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_41_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_5": {
+            "channels": [
+                {
+                    "sampler": "animation_5_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Foot",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_5_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Foot",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_5_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Foot",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_27",
+                "rotation": "accessor_29",
+                "scale": "accessor_30",
+                "translation": "accessor_28"
+            },
+            "samplers": {
+                "animation_5_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_5_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_5_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_6": {
+            "channels": [
+                {
+                    "sampler": "animation_6_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 L Toe0",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_6_scale_sampler",
+                    "target": {
+                        "id": "Bip01 L Toe0",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_6_translation_sampler",
+                    "target": {
+                        "id": "Bip01 L Toe0",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_31",
+                "rotation": "accessor_33",
+                "scale": "accessor_34",
+                "translation": "accessor_32"
+            },
+            "samplers": {
+                "animation_6_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_6_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_6_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_7": {
+            "channels": [
+                {
+                    "sampler": "animation_7_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Thigh",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_7_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Thigh",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_7_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Thigh",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_35",
+                "rotation": "accessor_37",
+                "scale": "accessor_38",
+                "translation": "accessor_36"
+            },
+            "samplers": {
+                "animation_7_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_7_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_7_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_8": {
+            "channels": [
+                {
+                    "sampler": "animation_8_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Calf",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_8_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Calf",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_8_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Calf",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_39",
+                "rotation": "accessor_41",
+                "scale": "accessor_42",
+                "translation": "accessor_40"
+            },
+            "samplers": {
+                "animation_8_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_8_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_8_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        },
+        "animation_9": {
+            "channels": [
+                {
+                    "sampler": "animation_9_rotation_sampler",
+                    "target": {
+                        "id": "Bip01 R Foot",
+                        "path": "rotation"
+                    }
+                },
+                {
+                    "sampler": "animation_9_scale_sampler",
+                    "target": {
+                        "id": "Bip01 R Foot",
+                        "path": "scale"
+                    }
+                },
+                {
+                    "sampler": "animation_9_translation_sampler",
+                    "target": {
+                        "id": "Bip01 R Foot",
+                        "path": "translation"
+                    }
+                }
+            ],
+            "count": 30,
+            "parameters": {
+                "TIME": "accessor_43",
+                "rotation": "accessor_45",
+                "scale": "accessor_46",
+                "translation": "accessor_44"
+            },
+            "samplers": {
+                "animation_9_rotation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "rotation"
+                },
+                "animation_9_scale_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "scale"
+                },
+                "animation_9_translation_sampler": {
+                    "input": "TIME",
+                    "interpolation": "LINEAR",
+                    "output": "translation"
+                }
+            }
+        }
+    },
+    "asset": {},
+    "bufferViews": {
+        "bufferView_175": {
+            "buffer": "baseMale.bin",
+            "byteLength": 205380,
+            "byteOffset": 0,
+            "target": 34962
+        },
+        "bufferView_176": {
+            "buffer": "baseMale.bin",
+            "byteLength": 2688,
+            "byteOffset": 205380
+        },
+        "bufferView_177": {
+            "buffer": "baseMale.bin",
+            "byteLength": 55440,
+            "byteOffset": 208068
+        },
+        "bufferView_178": {
+            "buffer": "baseMale.bin",
+            "byteLength": 35268,
+            "byteOffset": 263508,
+            "target": 34963
+        }
+    },
+    "buffers": {
+        "baseMale.bin": {
+            "byteLength": 298776,
+            "path": "baseMale.bin"
+        }
+    },
+    "cameras": {},
+    "images": {
+        "image_0": {
+            "path": "textures/whiteColor.png"
+        },
+        "image_1": {
+            "path": "textures/whiteNormal.png"
+        }
+    },
+    "lights": {},
+    "materials": {
+        "Material #0": {
+            "instanceTechnique": {
+                "technique": "technique_0",
+                "values": {
+                    "ambient": [
+                        0.5879999995231628,
+                        0.5879999995231628,
+                        0.5879999995231628
+                    ],
+                    "diffuse": "Map #0",
+                    "emission": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "shininess": 2.000000020657396,
+                    "specular": [
+                        0.8999999761581421,
+                        0.8999999761581421,
+                        0.8999999761581421
+                    ],
+                    "normalMap": "Map #1",
+                    "transparency": 1
+                }
+            },
+            "name": "Material #0"
+        }
+    },
+    "meshes": {
+        "baseMale-mesh": {
+            "name": "baseMale",
+            "primitives": [
+                {
+                    "attributes": {
+                        "JOINT": "attrbute_4",
+                        "NORMAL": "attrbute_2",
+                        "POSITION": "attrbute_1",
+                        "TEXCOORD_0": "attrbute_3",
+                        "WEIGHT": "attrbute_5"
+                    },
+                    "indices": "indices_6",
+                    "material": "Material #0"
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "Bip01": {
+            "children": [
+                "Bip01 Pelvis"
+            ],
+            "jointId": "Bip01",
+            "matrix": [
+                1.3709068298960706e-06,
+                -2.832769279977773e-16,
+                0.9999999403953552,
+                0.0,
+                0.9999999403953552,
+                3.883462984913735e-22,
+                -1.3709068298960706e-06,
+                0.0,
+                0.0,
+                1.0,
+                2.83276944882399e-16,
+                0.0,
+                0.0130615234375,
+                100.30524444580078,
+                2.086913824081421,
+                1.0
+            ],
+            "name": "Bip01"
+        },
+        "Bip01 Head": {
+            "children": [],
+            "jointId": "Bip01 Head",
+            "matrix": [
+                0.9519802927970885,
+                -0.3061593770980836,
+                -8.491600169691087e-07,
+                0.0,
+                0.3061593597257444,
+                0.9519802387794343,
+                -1.3318764047198762e-07,
+                0.0,
+                8.491602132287661e-07,
+                -1.3318628008210613e-07,
+                0.9999999999999999,
+                0.0,
+                4.92828369140625,
+                0.32710647583008523,
+                4.4330954551696777e-07,
+                1.0
+            ],
+            "name": "Bip01 Head"
+        },
+        "Bip01 L Calf": {
+            "children": [
+                "Bip01 L Foot"
+            ],
+            "jointId": "Bip01 L Calf",
+            "matrix": [
+                0.9961439967155474,
+                -0.08773307502269759,
+                2.688821387764051e-17,
+                0.0,
+                0.08773306987091045,
+                0.996143938220825,
+                1.3877787807814457e-17,
+                0.0,
+                4.456070928915423e-17,
+                -1.0408340855860843e-17,
+                0.9999999999999997,
+                0.0,
+                48.02616500854492,
+                0.0,
+                -3.814697265625e-06,
+                1.0
+            ],
+            "name": "Bip01 L Calf"
+        },
+        "Bip01 L Clavicle": {
+            "children": [
+                "Bip01 L UpperArm"
+            ],
+            "jointId": "Bip01 L Clavicle",
+            "matrix": [
+                -0.14257629215717288,
+                -0.11566878110170331,
+                0.983001947402954,
+                0.0,
+                -0.373401307856432,
+                -0.9134778634803288,
+                -0.16164672451847215,
+                0.0,
+                0.91664805108082,
+                -0.39010122586696555,
+                0.08704941761301828,
+                0.0,
+                -4.556289672851591,
+                -2.3136634826660156,
+                7.366403579711913,
+                1.0
+            ],
+            "name": "Bip01 L Clavicle"
+        },
+        "Bip01 L Finger0": {
+            "children": [
+                "Bip01 L Finger01"
+            ],
+            "jointId": "Bip01 L Finger0",
+            "matrix": [
+                0.7491516470909118,
+                0.5055950880050659,
+                -0.4279553294181825,
+                0.0,
+                0.5719564882828252,
+                -0.16785237987752394,
+                0.8029268076940009,
+                0.0,
+                0.3341224929804574,
+                -0.8462856754014038,
+                -0.41492523256335906,
+                0.0,
+                2.054908752441399,
+                1.5266723632812784,
+                -4.402721405029297,
+                1.0
+            ],
+            "name": "Bip01 L Finger0"
+        },
+        "Bip01 L Finger01": {
+            "children": [],
+            "jointId": "Bip01 L Finger01",
+            "matrix": [
+                0.9868868589401246,
+                0.16141346096992487,
+                2.980232233218416e-08,
+                0.0,
+                -0.16141345069861485,
+                0.9868867961410224,
+                -1.4901161249358807e-08,
+                0.0,
+                -3.181676538899225e-08,
+                9.895264163617412e-09,
+                0.99999988079071,
+                0.0,
+                5.426727294921868,
+                -3.814697244308718e-06,
+                0.0,
+                1.0
+            ],
+            "name": "Bip01 L Finger01"
+        },
+        "Bip01 L Finger1": {
+            "children": [
+                "Bip01 L Finger11"
+            ],
+            "jointId": "Bip01 L Finger1",
+            "matrix": [
+                0.9279106259346006,
+                -0.0611527040600776,
+                -0.36775317788124084,
+                0.0,
+                0.05513767470893117,
+                0.9981176296570649,
+                -0.026851590593217987,
+                0.0,
+                0.3687029891998124,
+                0.00463882128571071,
+                0.9295358016932616,
+                0.0,
+                12.517814636230469,
+                -0.708709716796875,
+                -5.336524009704588,
+                1.0
+            ],
+            "name": "Bip01 L Finger1"
+        },
+        "Bip01 L Finger11": {
+            "children": [],
+            "jointId": "Bip01 L Finger11",
+            "matrix": [
+                0.9989023804664613,
+                0.04684033244848255,
+                5.3085386808593427e-08,
+                0.0,
+                -0.04684033527001268,
+                0.9989024406375416,
+                -3.7252902811146793e-09,
+                0.0,
+                -5.320161394761769e-08,
+                1.2346639760921208e-09,
+                0.9999999999999989,
+                0.0,
+                4.185409545898423,
+                0.0,
+                -3.8146972620722863e-06,
+                1.0
+            ],
+            "name": "Bip01 L Finger11"
+        },
+        "Bip01 L Finger2": {
+            "children": [
+                "Bip01 L Finger21"
+            ],
+            "jointId": "Bip01 L Finger2",
+            "matrix": [
+                0.9928971529006957,
+                -0.11456048488616938,
+                0.032112624496221515,
+                0.0,
+                0.11325438851889012,
+                0.992764279939945,
+                0.03990945597811494,
+                0.0,
+                -0.036452309670451224,
+                -0.03598908611489841,
+                0.9986872090223005,
+                0.0,
+                13.611991882324233,
+                -0.9743194580078125,
+                -1.8661057949066162,
+                1.0
+            ],
+            "name": "Bip01 L Finger2"
+        },
+        "Bip01 L Finger21": {
+            "children": [],
+            "jointId": "Bip01 L Finger21",
+            "matrix": [
+                0.998274147510529,
+                0.05872471630573275,
+                -4.656612873077393e-10,
+                0.0,
+                -0.058724719812805116,
+                0.9982742071280102,
+                6.938893903907228e-18,
+                0.0,
+                4.6485766624915215e-10,
+                2.7345826991709288e-11,
+                0.9999999403953554,
+                0.0,
+                5.0828094482421875,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "name": "Bip01 L Finger21"
+        },
+        "Bip01 L Finger3": {
+            "children": [
+                "Bip01 L Finger31"
+            ],
+            "jointId": "Bip01 L Finger3",
+            "matrix": [
+                0.9388747215270995,
+                -0.0567562282085418,
+                0.3395481109619141,
+                0.0,
+                0.169159645233678,
+                0.9350895236248797,
+                -0.3114361617696746,
+                0.0,
+                -0.2998319828727571,
+                0.34983742830125064,
+                0.887532908038872,
+                0.0,
+                12.60337066650392,
+                -0.3902130126953125,
+                2.2122771739959735,
+                1.0
+            ],
+            "name": "Bip01 L Finger3"
+        },
+        "Bip01 L Finger31": {
+            "children": [],
+            "jointId": "Bip01 L Finger31",
+            "matrix": [
+                0.9987130165100095,
+                0.050718829035759,
+                2.7755575615628914e-17,
+                0.0,
+                -0.050718829093256576,
+                0.9987130176422051,
+                5.551115123125783e-17,
+                0.0,
+                2.7755575615628914e-17,
+                5.551115123125783e-17,
+                0.9999999999999999,
+                0.0,
+                4.1854248046875,
+                2.842170943040401e-14,
+                -1.4210854715202004e-14,
+                1.0
+            ],
+            "name": "Bip01 L Finger31"
+        },
+        "Bip01 L Finger4": {
+            "children": [
+                "Bip01 L Finger41"
+            ],
+            "jointId": "Bip01 L Finger4",
+            "matrix": [
+                0.7981697916984558,
+                0.14252094924449935,
+                0.5853314995765687,
+                0.0,
+                0.09981587955641025,
+                0.9268972204509655,
+                -0.3617988979880541,
+                0.0,
+                -0.594105963023511,
+                0.34720227144298044,
+                0.7255953861267106,
+                0.0,
+                10.757087707519531,
+                0.7306823730469034,
+                5.1960129737853995,
+                1.0
+            ],
+            "name": "Bip01 L Finger4"
+        },
+        "Bip01 L Finger41": {
+            "children": [],
+            "jointId": "Bip01 L Finger41",
+            "matrix": [
+                0.9963204860687256,
+                0.08570674061775208,
+                7.45058065243498e-09,
+                0.0,
+                -0.08570673552803007,
+                0.9963204269019155,
+                1.4901161138336505e-08,
+                0.0,
+                -6.146035180787379e-09,
+                -1.54848955880027e-08,
+                1.0000000000000007,
+                0.0,
+                3.3756752014160085,
+                1.52587890625e-05,
+                -7.629394517039145e-06,
+                1.0
+            ],
+            "name": "Bip01 L Finger41"
+        },
+        "Bip01 L Foot": {
+            "children": [
+                "Bip01 L Toe0"
+            ],
+            "jointId": "Bip01 L Foot",
+            "matrix": [
+                0.9977927803993225,
+                0.02363803982734683,
+                -0.062057137489318896,
+                0.0,
+                -0.028179439268627954,
+                0.9969077132792467,
+                -0.07335653901273906,
+                0.0,
+                0.06013121636239327,
+                0.07494333808220509,
+                0.9953731298682409,
+                0.0,
+                45.8156623840332,
+                9.5367431640625e-07,
+                -7.105427357601002e-15,
+                1.0
+            ],
+            "name": "Bip01 L Foot"
+        },
+        "Bip01 L Forearm": {
+            "children": [
+                "Bip01 L Hand"
+            ],
+            "jointId": "Bip01 L Forearm",
+            "matrix": [
+                0.9433493018150332,
+                -0.3318015336990357,
+                2.0816681711721685e-17,
+                0.0,
+                0.33180148429144596,
+                0.9433491613436652,
+                5.551115123125783e-17,
+                0.0,
+                1.9081958235744878e-17,
+                1.3877787807814457e-17,
+                0.9999999403953553,
+                0.0,
+                31.153902053833022,
+                1.9073486363652137e-06,
+                -2.842170943040401e-14,
+                1.0
+            ],
+            "name": "Bip01 L Forearm"
+        },
+        "Bip01 L Hand": {
+            "children": [
+                "Bip01 L Finger0",
+                "Bip01 L Finger1",
+                "Bip01 L Finger2",
+                "Bip01 L Finger3",
+                "Bip01 L Finger4"
+            ],
+            "jointId": "Bip01 L Hand",
+            "matrix": [
+                0.946153163909912,
+                0.31234523653984064,
+                0.08505704998970033,
+                0.0,
+                0.04384457605541046,
+                0.1366837360160893,
+                -0.9896439886217879,
+                0.0,
+                -0.32073648506365665,
+                0.9400840343221055,
+                0.11562909903233562,
+                0.0,
+                29.61047554016113,
+                -1.9073486363652137e-06,
+                1.525878909092171e-05,
+                1.0
+            ],
+            "name": "Bip01 L Hand"
+        },
+        "Bip01 L Thigh": {
+            "children": [
+                "Bip01 L Calf"
+            ],
+            "jointId": "Bip01 L Thigh",
+            "matrix": [
+                -0.9268110990524289,
+                -0.0020522251725197255,
+                0.3755225539207459,
+                0.0,
+                0.01467702857499728,
+                0.9990231395310616,
+                0.0416833909331477,
+                0.0,
+                -0.37524123836798345,
+                0.04414418154476296,
+                -0.9258755489142163,
+                0.0,
+                -9.050117492675781,
+                0.8825554847717276,
+                13.250487327575682,
+                1.0
+            ],
+            "name": "Bip01 L Thigh"
+        },
+        "Bip01 L Toe0": {
+            "children": [],
+            "jointId": "Bip01 L Toe0",
+            "matrix": [
+                7.450580402634799e-09,
+                1.0,
+                -2.7755575615628914e-17,
+                0.0,
+                -1.0000000000000002,
+                7.4505803471236476e-09,
+                -5.960464476845173e-08,
+                0.0,
+                -5.960464477886007e-08,
+                4.3021142204224816e-16,
+                0.9999999999999988,
+                0.0,
+                10.667832374572757,
+                13.72903823852539,
+                3.8146972585195726e-06,
+                1.0
+            ],
+            "name": "Bip01 L Toe0"
+        },
+        "Bip01 L UpperArm": {
+            "children": [
+                "Bip01 L Forearm"
+            ],
+            "jointId": "Bip01 L UpperArm",
+            "matrix": [
+                0.9553759098052977,
+                -0.23670266568660736,
+                -0.17671579122543338,
+                0.0,
+                0.23777715300037972,
+                0.9711979531918814,
+                -0.01538391409387882,
+                0.0,
+                0.17526743399811018,
+                -0.027321557706338165,
+                0.9841416465896189,
+                0.0,
+                18.323986053466797,
+                1.9073486328125e-06,
+                -1.525878903407829e-05,
+                1.0
+            ],
+            "name": "Bip01 L UpperArm"
+        },
+        "Bip01 Neck": {
+            "children": [
+                "Bip01 Head",
+                "Bip01 R Clavicle",
+                "Bip01 L Clavicle"
+            ],
+            "jointId": "Bip01 Neck",
+            "matrix": [
+                0.9259524941444397,
+                0.37764006853103643,
+                1.0474225291545736e-06,
+                0.0,
+                -0.3776400851230268,
+                0.9259525348276493,
+                -2.0537837031042706e-07,
+                0.0,
+                -1.0474225569241722e-06,
+                -2.0537810102932793e-07,
+                0.9999999999999999,
+                0.0,
+                29.05766296386716,
+                -0.0026416778564453125,
+                -8.38190317327403e-09,
+                1.0
+            ],
+            "name": "Bip01 Neck"
+        },
+        "Bip01 Pelvis": {
+            "children": [
+                "Bip01 Spine"
+            ],
+            "jointId": "Bip01 Pelvis",
+            "matrix": [
+                6.123233995742659e-17,
+                -1.776783221154904e-33,
+                1.0000000000009615,
+                0.0,
+                0.9999999403953554,
+                1.3868000223767773e-06,
+                -6.123233630763574e-17,
+                0.0,
+                -1.3868000223781107e-06,
+                0.999999940396317,
+                8.491701041703058e-23,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "name": "Bip01 Pelvis"
+        },
+        "Bip01 R Calf": {
+            "children": [
+                "Bip01 R Foot"
+            ],
+            "jointId": "Bip01 R Calf",
+            "matrix": [
+                0.9961441755294841,
+                -0.087733089923859,
+                -3.946495907847236e-17,
+                0.0,
+                0.08773307956293695,
+                0.9961440578888978,
+                -1.9081958235744878e-17,
+                0.0,
+                2.7538735181131813e-17,
+                -1.0408340855860843e-17,
+                1.0000001192092902,
+                0.0,
+                48.026168823242195,
+                0.0,
+                1.4210854715202004e-14,
+                1.0
+            ],
+            "name": "Bip01 R Calf"
+        },
+        "Bip01 R Clavicle": {
+            "children": [
+                "Bip01 R UpperArm"
+            ],
+            "jointId": "Bip01 R Clavicle",
+            "matrix": [
+                -0.14257629215717244,
+                -0.11566334217786718,
+                -0.9830026626586915,
+                0.0,
+                -0.3734012711515201,
+                -0.913478843540041,
+                0.16164166264862148,
+                0.0,
+                -0.9166480792075031,
+                0.3901006823947969,
+                0.08705158071831436,
+                0.0,
+                -4.556289672851591,
+                -2.3136215209960938,
+                -7.36641502380371,
+                1.0
+            ],
+            "name": "Bip01 R Clavicle"
+        },
+        "Bip01 R Finger0": {
+            "children": [
+                "Bip01 R Finger01"
+            ],
+            "jointId": "Bip01 R Finger0",
+            "matrix": [
+                0.7491516470909119,
+                0.5055951476097108,
+                0.427955389022827,
+                0.0,
+                0.5719565187119927,
+                -0.16785231469683892,
+                -0.8029268027592589,
+                0.0,
+                -0.3341225536596768,
+                0.8462857122995417,
+                -0.4149252300132523,
+                0.0,
+                2.054908752441392,
+                1.5266723632812216,
+                4.402719497680666,
+                1.0
+            ],
+            "name": "Bip01 R Finger0"
+        },
+        "Bip01 R Finger01": {
+            "children": [],
+            "jointId": "Bip01 R Finger01",
+            "matrix": [
+                0.9868868589401248,
+                0.16141347587108623,
+                -5.96046449141685e-08,
+                0.0,
+                -0.16141348730711197,
+                0.9868869288603537,
+                5.9604644719879474e-08,
+                0.0,
+                6.844403402372912e-08,
+                -4.920204443870091e-08,
+                0.9999999999999977,
+                0.0,
+                5.426734924316403,
+                7.105427357601002e-15,
+                -1.52587890625e-05,
+                1.0
+            ],
+            "name": "Bip01 R Finger01"
+        },
+        "Bip01 R Finger1": {
+            "children": [
+                "Bip01 R Finger11"
+            ],
+            "jointId": "Bip01 R Finger1",
+            "matrix": [
+                0.9279106855392453,
+                -0.061152726411819416,
+                0.3677531778812406,
+                0.0,
+                0.05513769825019165,
+                0.998117688776419,
+                0.026851592753168237,
+                0.0,
+                -0.3687029929810076,
+                -0.0046388159978802065,
+                0.9295358715898746,
+                0.0,
+                12.517807006835909,
+                -0.708709716796875,
+                5.336524486541746,
+                1.0
+            ],
+            "name": "Bip01 R Finger1"
+        },
+        "Bip01 R Finger11": {
+            "children": [],
+            "jointId": "Bip01 R Finger11",
+            "matrix": [
+                0.9989024996757512,
+                0.04684033244848255,
+                3.166496748141512e-08,
+                0.0,
+                -0.04684032972503267,
+                0.9989024415962987,
+                1.5612511283791264e-17,
+                0.0,
+                -3.1630208230382095e-08,
+                -1.4831972837414664e-09,
+                0.9999999999999996,
+                0.0,
+                4.185424804687514,
+                2.842170943040401e-14,
+                -3.552713678800501e-15,
+                1.0
+            ],
+            "name": "Bip01 R Finger11"
+        },
+        "Bip01 R Finger2": {
+            "children": [
+                "Bip01 R Finger21"
+            ],
+            "jointId": "Bip01 R Finger2",
+            "matrix": [
+                0.9928972721099854,
+                -0.11456049978733063,
+                -0.03211262449622153,
+                0.0,
+                0.11325439647241173,
+                0.9927643386371446,
+                -0.039909459706118235,
+                0.0,
+                0.03645230603784834,
+                0.03598908786238676,
+                0.99868720909019,
+                0.0,
+                13.611984252929688,
+                -0.974334716796875,
+                1.8661047220230103,
+                1.0
+            ],
+            "name": "Bip01 R Finger2"
+        },
+        "Bip01 R Finger21": {
+            "children": [],
+            "jointId": "Bip01 R Finger21",
+            "matrix": [
+                0.9982742667198179,
+                0.05872472375631334,
+                -7.91624187035378e-09,
+                0.0,
+                -0.05872472723769175,
+                0.9982743259005219,
+                6.938893903907228e-18,
+                0.0,
+                7.90257972949071e-09,
+                4.648790588590579e-10,
+                0.9999999999999999,
+                0.0,
+                5.082809448242173,
+                0.0,
+                9.536743181826068e-07,
+                1.0
+            ],
+            "name": "Bip01 R Finger21"
+        },
+        "Bip01 R Finger3": {
+            "children": [
+                "Bip01 R Finger31"
+            ],
+            "jointId": "Bip01 R Finger3",
+            "matrix": [
+                0.9388747811317442,
+                -0.056756235659122446,
+                -0.33954808115959156,
+                0.0,
+                0.1691596479034871,
+                0.9350895869713443,
+                0.31143619507444564,
+                0.0,
+                0.2998319564134524,
+                -0.3498374554583775,
+                0.8875329776248198,
+                0.0,
+                12.603393554687486,
+                -0.3902130126953125,
+                -2.2122771739959717,
+                1.0
+            ],
+            "name": "Bip01 R Finger3"
+        },
+        "Bip01 R Finger31": {
+            "children": [],
+            "jointId": "Bip01 R Finger31",
+            "matrix": [
+                0.9987130165100098,
+                0.050718836486339555,
+                -1.4901161221603232e-08,
+                0.0,
+                -0.050718839543858626,
+                0.9987130767161244,
+                5.551115123125783e-17,
+                0.0,
+                1.4881984061743125e-08,
+                7.557696690696503e-10,
+                1.0000001192092904,
+                0.0,
+                4.185424804687486,
+                -1.525878909092171e-05,
+                -1.4210854715202004e-14,
+                1.0
+            ],
+            "name": "Bip01 R Finger31"
+        },
+        "Bip01 R Finger4": {
+            "children": [
+                "Bip01 R Finger41"
+            ],
+            "jointId": "Bip01 R Finger4",
+            "matrix": [
+                0.798169732093811,
+                0.14252093434333798,
+                -0.5853315591812135,
+                0.0,
+                0.0998158875523009,
+                0.9268972869512577,
+                0.3617988544802886,
+                0.0,
+                0.5941060733924507,
+                -0.34720224202136135,
+                0.7255954182447978,
+                0.0,
+                10.757095336914062,
+                0.730682373046875,
+                -5.196016311645506,
+                1.0
+            ],
+            "name": "Bip01 R Finger4"
+        },
+        "Bip01 R Finger41": {
+            "children": [],
+            "jointId": "Bip01 R Finger41",
+            "matrix": [
+                0.9963206052780151,
+                0.08570677042007449,
+                -3.7252903151152594e-08,
+                0.0,
+                -0.08570677020115777,
+                0.9963206027331541,
+                -1.4901161082825354e-08,
+                0.0,
+                3.5838694512069225e-08,
+                1.8039154947580016e-08,
+                1.0000001192092896,
+                0.0,
+                3.3756637573242116,
+                -1.52587890625e-05,
+                1.4210854715202004e-14,
+                1.0
+            ],
+            "name": "Bip01 R Finger41"
+        },
+        "Bip01 R Foot": {
+            "children": [
+                "Bip01 R Toe0"
+            ],
+            "jointId": "Bip01 R Foot",
+            "matrix": [
+                0.9977927803993223,
+                0.02363802492618558,
+                0.06205689907073976,
+                0.0,
+                -0.028179405487490067,
+                0.9969077732122633,
+                0.07335649423722662,
+                0.0,
+                -0.060130984554619404,
+                -0.07494328459407149,
+                0.9953731884955274,
+                0.0,
+                45.81565856933592,
+                -1.9073486363652137e-06,
+                -3.814697272730427e-06,
+                1.0
+            ],
+            "name": "Bip01 R Foot"
+        },
+        "Bip01 R Forearm": {
+            "children": [
+                "Bip01 R Hand"
+            ],
+            "jointId": "Bip01 R Forearm",
+            "matrix": [
+                0.943349242210389,
+                -0.3318015933036807,
+                6.938893903907228e-18,
+                0.0,
+                0.3318016185222298,
+                0.9433493139095596,
+                1.3877787807814457e-17,
+                0.0,
+                -8.673617379884035e-17,
+                1.3877787807814457e-17,
+                1.00000011920929,
+                0.0,
+                31.15390968322754,
+                0.0,
+                1.52587890625e-05,
+                1.0
+            ],
+            "name": "Bip01 R Forearm"
+        },
+        "Bip01 R Hand": {
+            "children": [
+                "Bip01 R Finger0",
+                "Bip01 R Finger1",
+                "Bip01 R Finger2",
+                "Bip01 R Finger3",
+                "Bip01 R Finger4"
+            ],
+            "jointId": "Bip01 R Hand",
+            "matrix": [
+                0.9461531043052671,
+                0.3123451769351958,
+                -0.08505703508853905,
+                0.0,
+                0.043844573237547736,
+                0.1366837316078736,
+                0.9896439879575781,
+                0.0,
+                0.32073642705245997,
+                -0.9400839843512674,
+                0.11562909150414932,
+                0.0,
+                29.610471725463857,
+                -1.9073486292597863e-06,
+                0.0,
+                1.0
+            ],
+            "name": "Bip01 R Hand"
+        },
+        "Bip01 R Thigh": {
+            "children": [
+                "Bip01 R Calf"
+            ],
+            "jointId": "Bip01 R Thigh",
+            "matrix": [
+                -0.9268109798431399,
+                -0.0020501464605333086,
+                -0.3755227327346801,
+                0.0,
+                0.014677038789597252,
+                0.999023377790157,
+                -0.04167786282809915,
+                0.0,
+                0.37524140525886857,
+                -0.04413905914690287,
+                -0.9258756731392361,
+                0.0,
+                -9.050117492675795,
+                0.8826284408569327,
+                -13.25048351287842,
+                1.0
+            ],
+            "name": "Bip01 R Thigh"
+        },
+        "Bip01 R Toe0": {
+            "children": [],
+            "jointId": "Bip01 R Toe0",
+            "matrix": [
+                -1.490116136038111e-08,
+                0.9999999999999998,
+                3.7252902845841263e-09,
+                0.0,
+                -1.0,
+                -1.490116161018129e-08,
+                5.960464488294348e-08,
+                0.0,
+                5.9604644770186455e-08,
+                -3.72528943803907e-09,
+                0.9999999999999987,
+                0.0,
+                10.667832374572757,
+                13.72903919219971,
+                3.814697265625e-06,
+                1.0
+            ],
+            "name": "Bip01 R Toe0"
+        },
+        "Bip01 R UpperArm": {
+            "children": [
+                "Bip01 R Forearm"
+            ],
+            "jointId": "Bip01 R UpperArm",
+            "matrix": [
+                0.9553759694099427,
+                -0.2367026954889298,
+                0.17671582102775588,
+                0.0,
+                0.2377771797538842,
+                0.9711980062469627,
+                0.01538392151529129,
+                0.0,
+                -0.17526747370456858,
+                0.027321561384103493,
+                0.9841417639329629,
+                0.0,
+                18.32398986816407,
+                3.552713678800501e-15,
+                1.525878909092171e-05,
+                1.0
+            ],
+            "name": "Bip01 R UpperArm"
+        },
+        "Bip01 Spine": {
+            "children": [
+                "Bip01 L Thigh",
+                "Bip01 R Thigh",
+                "Bip01 Spine1"
+            ],
+            "jointId": "Bip01 Spine",
+            "matrix": [
+                0.995480239391327,
+                0.09496937692165376,
+                1.2488284255596233e-06,
+                0.0,
+                -0.09496937134849298,
+                0.9954801810291547,
+                -4.285835530026817e-06,
+                0.0,
+                -1.650206927602048e-06,
+                4.147863753342658e-06,
+                0.9999999403953553,
+                0.0,
+                9.093032836914062,
+                -0.01911425590515181,
+                1.2636184692384547e-05,
+                1.0
+            ],
+            "name": "Bip01 Spine"
+        },
+        "Bip01 Spine1": {
+            "children": [
+                "Bip01 Neck"
+            ],
+            "jointId": "Bip01 Spine1",
+            "matrix": [
+                0.9868186712265015,
+                -0.16183036565780642,
+                -4.4885268835059833e-07,
+                0.0,
+                0.1618303656577902,
+                0.986818671226504,
+                -3.6559917759860096e-08,
+                0.0,
+                4.4885264782578303e-07,
+                -3.6559979473648735e-08,
+                1.0,
+                0.0,
+                24.114822387695284,
+                -0.022829055786132812,
+                -6.332993507558726e-08,
+                1.0
+            ],
+            "name": "Bip01 Spine1"
+        },
+        "baseMale": {
+            "children": [],
+            "instanceSkin": {
+                "skeletons": [
+                    "Bip01"
+                ],
+                "skin": "skin_0",
+                "sources": [
+                    "baseMale-mesh"
+                ]
+            },
+            "matrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "name": "baseMale"
+        }
+    },
+    "samplers": {
+        "sampler_0": {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    },
+    "scene": "scene_0",
+    "scenes": {
+        "scene_0": {
+            "nodes": [
+                "Bip01",
+                "baseMale"
+            ]
+        }
+    },
+    "shaders": {},
+    "skins": {
+        "skin_0": {
+            "bindShapeMatrix": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                1
+            ],
+            "inverseBindMatrices": {
+                "bufferView": "bufferView_176",
+                "byteOffset": 0,
+                "count": 41,
+                "type": 5126
+            },
+            "joints": [
+                "Bip01 L UpperArm",
+                "Bip01 Spine1",
+                "Bip01 L Clavicle",
+                "Bip01 L Forearm",
+                "Bip01 Spine",
+                "Bip01 R Clavicle",
+                "Bip01 Head",
+                "Bip01 Neck",
+                "Bip01 Pelvis",
+                "Bip01 L Hand",
+                "Bip01 L Finger11",
+                "Bip01 L Finger1",
+                "Bip01 L Finger2",
+                "Bip01 L Finger21",
+                "Bip01 L Finger3",
+                "Bip01 L Finger31",
+                "Bip01 L Finger4",
+                "Bip01 L Finger41",
+                "Bip01 L Finger01",
+                "Bip01 L Finger0",
+                "Bip01 L Thigh",
+                "Bip01 R Thigh",
+                "Bip01 L Calf",
+                "Bip01 L Foot",
+                "Bip01 L Toe0",
+                "Bip01 R UpperArm",
+                "Bip01 R Forearm",
+                "Bip01 R Hand",
+                "Bip01 R Finger11",
+                "Bip01 R Finger1",
+                "Bip01 R Finger2",
+                "Bip01 R Finger21",
+                "Bip01 R Finger3",
+                "Bip01 R Finger31",
+                "Bip01 R Finger4",
+                "Bip01 R Finger41",
+                "Bip01 R Finger01",
+                "Bip01 R Finger0",
+                "Bip01 R Calf",
+                "Bip01 R Foot",
+                "Bip01 R Toe0",
+                "Bip01"
+            ]
+        }
+    },
+    "techniques": {
+        "technique_0": {
+            "parameters": {},
+            "pass": "defaultPass",
+            "passes": {
+                "defaultPass": {
+                    "instanceProgram": {
+                        "attributes": {},
+                        "program": "",
+                        "uniforms": {}
+                    },
+                    "states": {
+                        "blendEnable": false,
+                        "cullFaceEnable": false,
+                        "depthMask": true,
+                        "depthTestEnable": true
+                    }
+                }
+            }
+        }
+    },
+    "textures": {
+        "Map #0": {
+            "format": 6408,
+            "internalFormat": 6408,
+            "sampler": "sampler_0",
+            "source": "image_0",
+            "target": 3553
+        },
+        "Map #1": {
+            "format": 6408,
+            "internalFormat": 6408,
+            "sampler": "sampler_0",
+            "source": "image_1",
+            "target": 3553
+        }
+    }
+}
