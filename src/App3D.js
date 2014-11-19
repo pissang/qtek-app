@@ -6,6 +6,7 @@ define(function (require) {
     var Renderer = require('qtek/Renderer');
     var Animation = require('qtek/animation/Animation');
     var World = require('./World');
+    var ResourceManager = require('./ResourceManager');
 
     var App3D = Base.derive({
 
@@ -17,7 +18,9 @@ define(function (require) {
 
         _currentWorld: null,
 
-        _el: null
+        _el: null,
+
+        _resourceManger: null
     }, {
 
         init: function (el) {
@@ -25,6 +28,9 @@ define(function (require) {
 
             this._renderer = new Renderer();
             this._animation = new Animation();
+
+            this._resourceManger = new ResourceManager();
+            this._resourceManger.$init(this);
 
             el.appendChild(this._renderer.canvas);
             this._animation.start();
@@ -58,9 +64,7 @@ define(function (require) {
                 this.unloadWorld();
             }
 
-            var world = new World();
-            world.$init(this);
-            world.loadConfig(config);
+            var world = this._resourceManger.loadWorld(config);
 
             this._currentWorld = world;
         },

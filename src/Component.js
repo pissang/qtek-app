@@ -2,9 +2,9 @@ define(function (require) {
     
     'use strict';
     
-    var Base = require('qtek/core/Base');
+    var Clazz = require('./Clazz');
 
-    var Component = Base.derive({
+    var Component = Clazz.derive({
         _entity: null
     }, {
         type: 'COMPONENT',

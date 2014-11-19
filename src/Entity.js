@@ -2,9 +2,9 @@ define(function (require) {
 
     'use strict';
 
-    var Base = require('qtek/core/Base');
+    var Clazz = require('./Clazz');
 
-    var Entity = Base.derive({
+    var Entity = Clazz.derive({
         
         _components: null,
 
@@ -14,13 +14,14 @@ define(function (require) {
 
         _sceneNode: null
 
-    }, function () {
+    }, function (sceneNode) {
         this._components = [];
+
+        this._sceneNode = sceneNode;
     }, {
 
-        $init: function (world, sceneNode) {
+        $init: function (world) {
             this._world = world;
-            this._sceneNode = sceneNode;
         },
 
         $frame: function (frameTime) {
@@ -40,6 +41,10 @@ define(function (require) {
             for (var i = 0; i < this._components.length; i++) {
                 this._components[i].$dispose();
             }
+        },
+
+        $remove: function () {
+            this._world = null;
         },
 
         getSceneNode: function () {

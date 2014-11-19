@@ -15,7 +15,7 @@ define(function (require) {
         },
 
         dispose: function (entity, component) {
-
+            
         }
     }
 });

@@ -29,6 +29,10 @@ define({
         name: 'Example',
         path: 'model/example/example.json',
         textureRootPath: 'model/example/textures/'
+    }, {
+        name: 'plane',
+        procedure: 'plane',
+        material: 'meshMat'
     }],
     clips: [{
         name: 'run',
@@ -43,8 +47,35 @@ define({
         name: 'idle',
         path: 'model/animation/idle.json'
     }],
+    textures: [{
+        name: 'diffuse',
+        wrapS: 'REPEAT',
+        wratT: 'REPEAT',
+        anisotropic: 32,
+        url: 'textures/example.png'
+    }],
+    shaders: [{
+        url: ''
+    }],
+    materials: [{
+        name: 'meshMat',
+        shader: 'buildin.physical',
+        uniforms: {
+            diffuseMap: '#diffuse',
+            color: [1, 1, 1]
+        },
+        vertexDefines: {},
+        fragmentDefines: {}
+    }],
     entities: [{
-        path: '/Example/node/mesh',
+        path: '/Example/node',
+        // Override material
+        materials: [{
+            meshPath: 'mesh',
+            // Use name if reference to one of the materials
+            // Null if want to use the original material
+            name: 'meshMat'
+        }],
         components: [{
             type: 'plugin',
             // Load plugin script asynchronously

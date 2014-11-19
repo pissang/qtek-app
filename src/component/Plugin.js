@@ -10,6 +10,8 @@ define(function (require) {
          * Context can only be assigned on create
          */
         context: null
+    }, function (context) {
+        this.context = context;
     }, {
         type: 'PLUGIN',
 

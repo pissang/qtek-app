@@ -5,9 +5,13 @@ define(function (require) {
     var Component = require('../Component');
 
     var AnimationComponent = Component.derive({
+        
         _currentPlayClip: null
+        
     }, function () {
+        
         this._clips = {};
+
         this._skeletons = [];
     }, {
         type: 'ANIMATION',
