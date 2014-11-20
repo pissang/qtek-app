@@ -85,6 +85,7 @@ define(function (require) {
 
             this._createMaterials(config.materials);
 
+            // Load models
             if (config.models) {
                 var modelLoaders = this._loadModels(config.models);
                 var task = new TaskGroup().all(modelLoaders);
@@ -99,6 +100,8 @@ define(function (require) {
                     }, this);
                 }, this);
             }
+
+            // Load animation clips
             if (config.clips) {
                 var clipLoaders = this._loadClips(config.clips);
                 var task = new TaskGroup().all(clipLoaders);
@@ -106,6 +109,7 @@ define(function (require) {
                 task.success(this._afterLoadClips, this);
             }
 
+            // Load textures
             var task = new TaskGroup().all(tasks);
             task.success(function () {
                 // Loading textures
@@ -318,6 +322,8 @@ define(function (require) {
             this._world.setMainCamera(config.mainCamera);
 
             this._createEntities(config.entities);
+
+            this._appInstance.setGraphic(config.graphic);
         },
 
         _createCameras: function (cameras) {
@@ -390,12 +396,11 @@ define(function (require) {
                         break;
                 }
 
-                if (lightInfo.color) {
-                    light.color = lightInfo.color;
-                }
-                if (lightInfo.intensity != null) {
-                    light.intensity = lightInfo.intensity;
-                }
+                ['color', 'intensity', 'shadowResolution', 'castShadow'].forEach(function (propName) {
+                    if (lightInfo[propName] != null) {
+                        light[propName] = lightInfo[propName];
+                    }
+                });
 
                 if (lightInfo.name != null) {
                     light.setName(lightInfo.name);

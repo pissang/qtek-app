@@ -31,7 +31,9 @@ define(function (require) {
 
         $dispose: function () {
             this._entity = null;
-        }
+        },
+
+        $dispatchEvent: null
     });
 
     return Component;

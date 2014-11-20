@@ -1,4 +1,12 @@
 define({
+    // Graphic configs
+    graphic: {
+        shadow: {
+            enable: true,
+            shadowCascade: 2
+        }
+    },
+
     cameras: [{
         name: 'main',
         position: [0, 200, 300],
@@ -8,7 +16,10 @@ define({
     lights: [{
         name: 'main',
         type: 'directional',
-        intensity: 0.7
+        intensity: 0.7,
+        position: [10, 10, 10],
+        target: [0, 0, 0],
+        shadowResolution: 1024
     }, {
         name: 'ambient',
         type: 'ambient',

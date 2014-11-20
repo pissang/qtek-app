@@ -77,8 +77,17 @@ define(function (require) {
                     return this._components[i];
                 }
             }
-        }
+        },
 
+        broadcastComponentEvent: function () {
+            for (var i = 0; i < this._components.length; i++) {
+                var component = this._components[i];
+                // TODO apply performance ?
+                if (component.$dispatchEvent) {
+                    component.$dispatchEvent.apply(component, arguments);
+                }
+            }
+        }
     });
 
     return Entity;

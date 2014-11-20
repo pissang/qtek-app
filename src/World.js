@@ -39,13 +39,17 @@ define(function (require) {
 
         $dispose: function () {
             
-            this.getAppInstance().getRenderer.disposeScene(this._scene);
+            this._appInstance.getRenderer().disposeScene(this._scene);
 
             for (var i = 0; i < this._entities.length; i++) {
                 this._entities[i].$dispose();
             }
 
             this.trigger('dispose', frameTime);
+        },
+
+        $getEntities: function () {
+            return this._entities;
         },
 
         getScene: function () {
@@ -91,10 +95,15 @@ define(function (require) {
             entity.$remove();
         },
 
+        eachEntity: function (cb, context) {
+            for (var i = 0, len = this._entities.length; i < len; i++) {
+                cb.call(context, this._entities[i]);
+            }
+        },
+
         getAppInstance: function () {
             return this._appInstance;
         }
-
     });
 
     return World;

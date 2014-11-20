@@ -7,6 +7,7 @@ define(function (require) {
     var Animation = require('qtek/animation/Animation');
     var World = require('./World');
     var ResourceManager = require('./ResourceManager');
+    var GraphicManager = require('./GraphicManager');
 
     var App3D = Base.derive({
 
@@ -20,7 +21,9 @@ define(function (require) {
 
         _el: null,
 
-        _resourceManger: null
+        _resourceManger: null,
+
+        _graphicManager: null
     }, {
 
         init: function (el) {
@@ -32,12 +35,17 @@ define(function (require) {
             this._resourceManger = new ResourceManager();
             this._resourceManger.$init(this);
 
+            this._graphicManager = new GraphicManager();
+            this._graphicManager.$init(this);
+
             el.appendChild(this._renderer.canvas);
             this._animation.start();
 
             this._animation.on('frame', this._frame, this);
 
             this.resize();
+
+            this.trigger('init');
         },
 
         resize: function () {
@@ -80,6 +88,16 @@ define(function (require) {
             return this._currentWorld;
         },
 
+        setGraphic: function (config) {
+            if (config.shadow) {
+                this._graphicManager.setShadow(config.shadow);
+            }
+            
+            if (config.postProcessing) {
+                this._graphicManager.setPostProcessing(config.postProcessing);
+            }
+        },
+
         _frame: function (frameTime) {
             this._frameTime = frameTime;
             if (this._currentWorld) {
@@ -90,7 +108,21 @@ define(function (require) {
                     this._currentWorld.$frame(frameTime);
                     // Adjust aspect dynamically
                     camera.aspect = this._renderer.width / this._renderer.height;
-                    this._renderer.render(scene, camera);
+
+                    this._graphicManager.render(scene, camera);
+                }
+            }
+
+            this.trigger('frame', frameTime);
+        },
+
+        broadcastEntityEvent: function () {
+            if (this._currentWorld) {
+                var entities = this._currentWorld.getEntities();
+                for (var i = 0; i < entities.length; i++) {
+                    // TODO apply performance ?
+                    entities[i].trigger.apply(entities[i], arguments);
+                    entities[i].broadcastComponentEvent.apply(entities[i], arguments);
                 }
             }
         }
