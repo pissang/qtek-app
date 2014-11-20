@@ -118,7 +118,7 @@ define(function (require) {
 
         broadcastEntityEvent: function () {
             if (this._currentWorld) {
-                var entities = this._currentWorld.getEntities();
+                var entities = this._currentWorld.$getEntities();
                 for (var i = 0; i < entities.length; i++) {
                     // TODO apply performance ?
                     entities[i].trigger.apply(entities[i], arguments);

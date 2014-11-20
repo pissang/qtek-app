@@ -9,9 +9,11 @@ define(function (require) {
         /**
          * Context can only be assigned on create
          */
-        context: null
-    }, function (context) {
-        this.context = context;
+        _context: null
+    }, function (ContextCtor) {
+        if (ContextCtor) {
+            this._context = new ContextCtor();
+        }
     }, {
         type: 'PLUGIN',
 
@@ -31,37 +33,38 @@ define(function (require) {
         },
 
         $dispatchEvent: function (name) {
-            this._invodeContextMethodWithArguments('on' + name);
-        },
-
-        _invokeContextMethod: function (name) {
-            if (this.context && this.context[name]) {
-                this.context[name](this.getEntity());
-            }
-        },
-
-        _invodeContextMethodWithArguments: function (name) {
-            if (this.context && this.context[name]) {
+            name = 'on' + name;
+            if (this._context && this._context[name]) {
                 var args = arguments;
-                var handler = this.context[name];
+                var handler = this._context[name];
                 var entity = this.getEntity();
                 switch (args.length) {
                     case 1:
-                        handler(entity);
+                        handler.call(this._context, entity);
                         break;
                     case 2:
-                        handler(entity, args[1]);
+                        handler.call(this._context, entity, args[1]);
                         break;
                     case 3:
-                        handler(entity, args[1], args[2]);
+                        handler.call(this._context, entity, args[1], args[2]);
                         break;
                     case 4:
-                        handler(entity, args[1], args[2], args[3]);
+                        handler.call(this._context, entity, args[1], args[2], args[3]);
                         break;
                     default:
-                        handler.apply(this, Array.prototype.slice.call(args, 1));
+                        handler.apply(this._context, Array.prototype.slice.call(args, 1));
                         break;
                 }
+            }
+        },
+
+        setContext: function (ContextCtor) {
+            this._context = new ContextCtor();
+        },
+
+        _invokeContextMethod: function (name) {
+            if (this._context && this._context[name]) {
+                this._context[name](this.getEntity());
             }
         }
     });

@@ -27,7 +27,7 @@ define({
     mainCamera: 'main',
     models: [{
         name: 'Example',
-        path: 'model/example/example.json',
+        url: 'model/example/example.json',
         textureRootPath: 'model/example/textures/'
     }, {
         name: 'plane',
@@ -36,16 +36,16 @@ define({
     }],
     clips: [{
         name: 'run',
-        path: 'model/animation/run.json'
+        url: 'model/animation/run.json'
     }, {
         name: 'runLeft',
-        path: 'model/animation/runLeft.json'
+        url: 'model/animation/runLeft.json'
     }, {
         name: 'runRight',
-        path: 'model/animation/runRight.json'
+        url: 'model/animation/runRight.json'
     }, {
         name: 'idle',
-        path: 'model/animation/idle.json'
+        url: 'model/animation/idle.json'
     }],
     textures: [{
         name: 'diffuse',
@@ -68,7 +68,7 @@ define({
         fragmentDefines: {}
     }],
     entities: [{
-        path: '/Example/node',
+        sceneNodePath: '/Example/node',
         // Override material
         materials: [{
             meshPath: 'mesh',

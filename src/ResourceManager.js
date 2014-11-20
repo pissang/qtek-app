@@ -449,7 +449,7 @@ define(function (require) {
 
         _createEntities: function (entities) {
             qtekUtil.each(entities, function (entityInfo) {
-                var sceneNode = this._world.getScene().queryNode(entityInfo.path);
+                var sceneNode = this._world.getScene().queryNode(entityInfo.sceneNodePath);
                 if (sceneNode) {
                     var entity = new Entity(sceneNode);
                     this._world.addEntity(entity);
@@ -475,7 +475,7 @@ define(function (require) {
                         htmlPath = htmlPath.slice(0, htmlPath.lastIndexOf('/'));
                         var absUrl = qtekUtil.relative2absolute(componentInfo.scriptUrl, htmlPath);
                         require([absUrl], function (context) {
-                            component.context = context;
+                            component.setContext(context);
                         });
                         entity.addComponent(component);
                     }
@@ -531,10 +531,10 @@ define(function (require) {
                         if (inputClip) {
                             if (blendType === '2d') {
                                 var position = clipInfo.inputClips[i].position || [0, 0];
-                                blendClip.addInput(new Vector2(position[0], position[1]), inputClip);
+                                blendClip.addInput(new Vector2(position[0], position[1]), inputClip, clipInfo.inputClips[i].offset || 0);
                             }
                             else {
-                                blendClip.addInput(clipInfo.inputClips[i].position || 0, inputClip);
+                                blendClip.addInput(clipInfo.inputClips[i].position || 0, inputClip, clipInfo.inputClips[i].offset || 0);
                             }
                             exampleClip = inputClip.output != null ? inputClip.output : inputClip;
                         }

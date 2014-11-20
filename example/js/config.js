@@ -1,7 +1,8 @@
 require.config({
     paths : {
         'glmatrix' : '../../../qtek/thirdparty/gl-matrix',
-        'text': '../js/text'
+        'text': '../js/text',
+        'socket.io': '../dep/socket.io'
     },
     packages: [{
         name: 'qtek',

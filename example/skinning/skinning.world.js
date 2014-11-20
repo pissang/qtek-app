@@ -3,12 +3,13 @@ define({
     graphic: {
         shadow: {
             enable: true,
-            shadowCascade: 2
+            shadowCascade: 2,
+            cascadeSplitLogFactor: 0.4
         }
     },
 
     cameras: [{
-        name: 'main',
+        name: 'mainCamera',
         position: [0, 200, 300],
         target: [0, 100, 0]
     }],
@@ -26,7 +27,7 @@ define({
         intensity: 0.2
     }],
     
-    mainCamera: 'main',
+    mainCamera: 'mainCamera',
     
     textures: [{
         target: '2D',
@@ -74,7 +75,7 @@ define({
     }],
     
     entities: [{
-        path: 'baseMale',
+        sceneNodePath: 'baseMale',
         components: [{
             type: 'animation',
             clips: [{
@@ -90,7 +91,8 @@ define({
                 }, {
                     name: 'strafeLeft',
                     type: 'skinning',
-                    position: [-2, 0]
+                    position: [-2, 0],
+                    offset: 400
                 }, {
                     name: 'strafeRight',
                     type: 'skinning',
@@ -103,7 +105,13 @@ define({
             }]
         }, {
             type: 'plugin',
-            scriptUrl: 'baseMale.js'
+            scriptUrl: 'baseMale.plugin.js'
+        }]
+    }, {
+        sceneNodePath: 'mainCamera',
+        components: [{
+            type: 'plugin',
+            scriptUrl: '../js/orbitCamera.plugin.js'
         }]
     }]
 });

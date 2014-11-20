@@ -63,6 +63,9 @@ define(function (require) {
         setMainCamera: function (camera) {
             if (typeof(camera) === 'string') {
                 camera = this.getCamera(camera);
+                if (!camera) {
+                    console.warn('Camera ' + camera + ' not found');
+                }
             }
             this._mainCamera = camera;
         },
