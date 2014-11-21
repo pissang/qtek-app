@@ -10,15 +10,15 @@ define(function (require) {
          * Context can only be assigned on create
          */
         _context: null
-    }, function (ContextCtor) {
+    }, function (entity, ContextCtor) {
         if (ContextCtor) {
             this._context = new ContextCtor();
         }
     }, {
         type: 'PLUGIN',
 
-        $init: function (entity) {
-            Component.prototype.$init.call(this, entity);
+        $init: function () {
+            Component.prototype.$init.call(this);
             this._invokeContextMethod('init');
         },
 
@@ -60,6 +60,17 @@ define(function (require) {
 
         setContext: function (ContextCtor) {
             this._context = new ContextCtor();
+        },
+
+        setParameters: function (parameters) {
+            if (parameters) {
+                // TODO parameters is a vector
+                for (var name in parameters) {
+                    if (parameters.hasOwnProperty(name)) {
+                        this._context[name] = parameters[name];
+                    }
+                }
+            }
         },
 
         _invokeContextMethod: function (name) {

@@ -2,6 +2,7 @@ define(function (require) {
     
     var Clazz = require('./Clazz');
     var ShadowMapPass = require('qtek/prePass/ShadowMap');
+    var Renderer = require('qtek/Renderer');
     var EnvironmentMapPass = require('qtek/prePass/EnvironmentMap');
     var FXLoader = require('qtek/loader/FX');
     var CompositorSceneNode = require('qtek/compositor/SceneNode');
@@ -9,6 +10,8 @@ define(function (require) {
     var GraphicManager = Clazz.derive({
 
         _shadowMapPass: null,
+
+        _debugShadow: false,
 
         _compositor: null,
 
@@ -36,6 +39,12 @@ define(function (require) {
             } else {
                 renderer.render(scene, camera);
             }
+            if (this._shadowMapPass && this._debugShadow) {
+                var clear = renderer.clear;
+                renderer.clear = Renderer.DEPTH_BUFFER_BIT;
+                this._shadowMapPass.renderDebug(renderer, 200);
+                renderer.clear = clear;
+            }
         },
 
         setShadow: function (config) {
@@ -58,6 +67,7 @@ define(function (require) {
                     this._shadowMapPass.dispose(renderer);
                 }
             }
+            this._debugShadow = !!config.debug;
         },
 
         setPostProcessing: function (config) {

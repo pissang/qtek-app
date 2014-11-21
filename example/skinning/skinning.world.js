@@ -3,28 +3,40 @@ define({
     graphic: {
         shadow: {
             enable: true,
-            shadowCascade: 2,
-            cascadeSplitLogFactor: 0.4
+            shadowCascade: 3,
+            cascadeSplitLogFactor: 0.2
         }
     },
 
     cameras: [{
         name: 'mainCamera',
-        position: [0, 200, 300],
-        target: [0, 100, 0]
+        position: [0, 200, -300],
+        target: [0, 100, 0],
+
+        parent: 'baseMale',
+        far: 10000
     }],
     
     lights: [{
-        name: 'main',
+        name: 'mainLight',
         type: 'directional',
-        intensity: 0.7,
-        position: [10, 10, 10],
+        intensity: 0.8,
+        position: [10, 20, 10],
         target: [0, 0, 0],
-        shadowResolution: 1024
+        shadowResolution: 1024,
+        shadowBias: 0.002,
+        shadowSlopeScale: 5
     }, {
         name: 'ambient',
         type: 'ambient',
-        intensity: 0.2
+        intensity: 0.1
+    }, {
+        name: 'fillLight',
+        type: 'point',
+        intensity: 0.5,
+        range: 300,
+        position: [0, 200, -120],
+        parent: 'baseMale'
     }],
     
     mainCamera: 'mainCamera',
@@ -43,7 +55,7 @@ define({
         shader: 'buildin.lambert',
         uniforms: {
             diffuseMap: '#groundDiffuse',
-            uvRepeat: [100, 100]
+            uvRepeat: [1000, 1000]
         },
         vertexDefines: {},
         fragmentDefines: {}
@@ -57,7 +69,8 @@ define({
         procedure: 'plane',
         material: 'ground',
         rotation: [-Math.PI / 2, 0, 0],
-        scale: [10000, 10000, 1]
+        scale: [100000, 100000, 1],
+        castShadow: false
     }],
     
     clips: [{
@@ -72,6 +85,9 @@ define({
     }, {
         name: 'idle',
         url: '../asset/baseMale/baseMale@idle.json'
+    }, {
+        name: 'jump',
+        url: '../asset/baseMale/baseMale@jump.json'
     }],
     
     entities: [{
@@ -82,33 +98,42 @@ define({
                 name: 'move',
                 type: 'blend',
                 blend: '2d',
+                loop: true,
                 autoPlay: true,
                 position: [0, 0],
                 inputClips: [{
                     name: 'run',
                     type: 'skinning',
-                    position: [0, 4]
+                    position: [0, 10]
                 }, {
                     name: 'strafeLeft',
                     type: 'skinning',
-                    position: [-2, 0],
+                    position: [-3, 0],
                     offset: 400
                 }, {
                     name: 'strafeRight',
                     type: 'skinning',
-                    position: [2, 0]
+                    position: [3, 0]
                 }, {
                     name: 'idle',
                     type: 'skinning',
                     position: [0, 0]
                 }]
+            }, {
+                name: 'jump',
+                type: 'skinning',
+                loop: false
             }]
         }, {
             type: 'plugin',
-            scriptUrl: 'baseMale.plugin.js'
+            scriptUrl: '../js/baseMale.plugin.js',
+            parameters: {
+                forwardMaxSpeed: 10,
+                sideMaxSpeed: 3
+            }
         }]
     }, {
-        sceneNodePath: 'mainCamera',
+        sceneNodePath: 'baseMale/mainCamera',
         components: [{
             type: 'plugin',
             scriptUrl: '../js/orbitCamera.plugin.js'

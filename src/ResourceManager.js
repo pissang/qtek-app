@@ -38,6 +38,7 @@ define(function (require) {
     var PerspectiveCamera = require('qtek/camera/Perspective');
 
     var World = require('./World');
+    var Prefab = require('./Prefab');
 
     var AnimationComponent = require('./component/Animation');
     var AudioComponent = require('./component/Audio');
@@ -49,45 +50,39 @@ define(function (require) {
 
         _appInstance: null,
 
-        _clipsMap: null,
-
-        _materialsMap: null,
-
-        _texturesMap: null,
-
-        _world: null,
-
         _shaderLibrary: null
     }, {
 
         $init: function (app3d) {
             this._appInstance = app3d;
 
-            this._clipsMap = {};
-
-            this._materialsMap = {};
-
-            this._texturesMap = {};
-
             this._shaderLibrary = shaderLibrary.createLibrary();
         },
 
         loadWorld: function (config) {
 
-            this._world = new World();
-            this._world.$init(this._appInstance);
+            var world = new World(this._appInstance);
+
+            var lib = {
+                clipsMap: {},
+                materialsMap: {},
+                texturesMap: {},
+                rootNode: world.getScene(),
+                entities: [],
+                cameras: []
+            };
 
             var tasks = [];
             var loadingTextures = [];
             if (config.textures) {
-                loadingTextures = this._loadTextures(config.textures);
+                loadingTextures = this._loadTextures(config.textures, lib);
             }
 
-            this._createMaterials(config.materials);
+            this._createMaterials(config.materials, lib);
 
             // Load models
             if (config.models) {
-                var modelLoaders = this._loadModels(config.models);
+                var modelLoaders = this._loadModels(config.models, lib);
                 var task = new TaskGroup().all(modelLoaders);
                 tasks.push(task);
                 task.success(function (res) {
@@ -103,10 +98,14 @@ define(function (require) {
 
             // Load animation clips
             if (config.clips) {
-                var clipLoaders = this._loadClips(config.clips);
+                var clipLoaders = this._loadClips(config.clips, lib);
                 var task = new TaskGroup().all(clipLoaders);
                 tasks.push(task);
-                task.success(this._afterLoadClips, this);
+                task.success(function (res) {
+                    qtekUtil.each(res, function (item) {
+                        lib.clipsMap[item.clip.name] = item.clip;
+                    }, this);
+                }, this);
             }
 
             // Load textures
@@ -118,15 +117,31 @@ define(function (require) {
                 });
                 var textureTask = new TaskGroup().allSettled(loadingTextures);
                 textureTask.success(function () {
-                    this._initializeAfterLoad(config);
+                    this._initializeAfterLoad(config, lib);
+
+                    lib.cameras.forEach(function (camera) {
+                        world.addCamera(camera);
+                    });
+                    lib.entities.forEach(function (entity) {
+                        world.addEntity(entity);
+                    });
+
+                    world.setMainCamera(config.mainCamera);
+
+                    world.$init();
+
                     this.trigger('load');
                 }, this);
             }, this);
 
-            return this._world;
+            return world;
         },
 
-        _loadTextures: function (textures) {
+        loadPrefab: function () {
+
+        },
+
+        _loadTextures: function (textures, lib) {
             var propKeys = ['type', 'wrapS', 'wrapT', 'magFilter', 'minFilter'];
             var textures = textures.map(function (textureInfo) {
                 var target = textureInfo.target || '';
@@ -171,14 +186,14 @@ define(function (require) {
                     texture.anisotropic = textureInfo.anisotropic;
                 }
 
-                this._texturesMap[textureInfo.name] = texture;
+                lib.texturesMap[textureInfo.name] = texture;
                 return texture;
             }, this);
 
             return textures
         },
 
-        _createMaterials: function (materials) {
+        _createMaterials: function (materials, lib) {
             qtekUtil.each(materials, function (materialInfo) {
                 var shaderName = materialInfo.shader || 'buildin.physical';
                 var enabledTextures = [];
@@ -201,17 +216,17 @@ define(function (require) {
                 for (var key in materialInfo.uniforms) {
                     var val = materialInfo.uniforms[key];
                     if (typeof(val) === 'string' && val.indexOf('#') === 0) {
-                        material.set(key, this._texturesMap[val.slice(1)]);
+                        material.set(key, lib.texturesMap[val.slice(1)]);
                     } else {
                         material.set(key, val);
                     }
                 }
 
-                this._materialsMap[materialInfo.name] = material;
+                lib.materialsMap[materialInfo.name] = material;
             }, this);
         },
 
-        _loadModels: function(models) {
+        _loadModels: function(models, lib) {
             var meshLoaders = models.map(function (modelInfo) {
                 if (modelInfo.url) {
                     var loader = new GLTFLoader({
@@ -228,25 +243,32 @@ define(function (require) {
                     }
 
                     this._setTransform(loader.rootNode, modelInfo);
-                    this._addSceneNode(loader.rootNode, modelInfo);
+                    this._addSceneNode(loader.rootNode, modelInfo, lib);
                     return loader;
                 }
                 // Procedure mesh
                 else if (modelInfo.procedure) {
                     var mesh = new Mesh({
                         geometry: this._createGeometry(modelInfo),
-                        material: this._materialsMap[modelInfo.material]
+                        material: lib.materialsMap[modelInfo.material]
                     });
 
+                    if (modelInfo.castShadow != null) {
+                        mesh.castShadow = modelInfo.castShadow;
+                    }
+                    if (modelInfo.receiveShadow != null) {
+                        mesh.receiveShadow = modelInfo.receiveShadow;
+                    }
+
                     this._setTransform(mesh, modelInfo);
-                    this._addSceneNode(mesh, modelInfo);
+                    this._addSceneNode(mesh, modelInfo, lib);
                 }
             }, this);
 
             return meshLoaders;
         },
 
-        _createGeometry: function (modelInfo) {
+        _createGeometry: function (modelInfo, lib) {
             switch (modelInfo.procedure.toLowerCase()) {
                 case 'sphere':
                     return new SphereGeo({
@@ -288,7 +310,7 @@ define(function (require) {
             }
         },
 
-        _loadClips: function (clips) {
+        _loadClips: function (clips, lib) {
             var clipLoaders = clips.map(function (clipInfo) {
                 if (clipInfo.url) {
                     var loader = new GLTFLoader({
@@ -307,26 +329,18 @@ define(function (require) {
             return clipLoaders;
         },
 
-        _afterLoadClips: function (res) {
-            qtekUtil.each(res, function (item) {
-                this._clipsMap[item.clip.name] = item.clip;
-            }, this);
+        _initializeAfterLoad: function (config, lib) {
+
+            this._createLights(config.lights, lib);
+
+            this._createCameras(config.cameras, lib);
+
+            this._createEntities(config.entities, lib);
+
+            this._appInstance.setGraphic(config.graphic, lib);
         },
 
-        _initializeAfterLoad: function (config) {
-
-            this._createLights(config.lights);
-
-            this._createCameras(config.cameras);
-
-            this._world.setMainCamera(config.mainCamera);
-
-            this._createEntities(config.entities);
-
-            this._appInstance.setGraphic(config.graphic);
-        },
-
-        _createCameras: function (cameras) {
+        _createCameras: function (cameras, lib) {
             qtekUtil.each(cameras, function (cameraInfo) {
                 var camera;
                 var type = cameraInfo.type || '';
@@ -356,13 +370,13 @@ define(function (require) {
 
                 this._setTransform(camera, cameraInfo);
 
-                this._addSceneNode(camera, cameraInfo);
+                this._addSceneNode(camera, cameraInfo, lib);
 
-                this._world.addCamera(camera);
+                lib.cameras.push(camera);
             }, this);
         },
 
-        _createLights: function (lights) {
+        _createLights: function (lights, lib) {
             qtekUtil.each(lights, function (lightInfo) {
                 var light;
                 var type = lightInfo.type || '';
@@ -408,7 +422,7 @@ define(function (require) {
 
                 this._setTransform(light, lightInfo);
 
-                this._addSceneNode(light, lightInfo);
+                this._addSceneNode(light, lightInfo, lib);
             }, this);
         },
 
@@ -437,73 +451,77 @@ define(function (require) {
             }
         },
 
-        _addSceneNode: function (node, info) {
+        _addSceneNode: function (node, info, lib) {
             if (info.parent) {
-                var parentNode = this._world.getScene().queryNode(info.parent);
+                var parentNode = lib.rootNode.queryNode(info.parent);
                 parentNode.add(node);
             }
             else {
-                this._world.getScene().add(node);
+                lib.rootNode.add(node);
             }
         },
 
-        _createEntities: function (entities) {
+        _createEntities: function (entities, lib) {
             qtekUtil.each(entities, function (entityInfo) {
-                var sceneNode = this._world.getScene().queryNode(entityInfo.sceneNodePath);
+                var sceneNode = lib.rootNode.queryNode(entityInfo.sceneNodePath);
                 if (sceneNode) {
-                    var entity = new Entity(sceneNode);
-                    this._world.addEntity(entity);
+                    var entity = new Entity(this._appInstance, sceneNode);
+                    lib.entities.push(entity);
 
                     // Create components;
                     if (entityInfo.components) {
                         for (var i = 0; i < entityInfo.components.length; i++) {
-                            var component = this._createComponent(entityInfo.components[i], entity);
+                            var component = this._createComponent(entityInfo.components[i], entity, lib);
                         }
                     }
                 }
             }, this);
         },
 
-        _createComponent: function (componentInfo, entity) {
+        _createComponent: function (componentInfo, entity, lib) {
             var component;
             var type = componentInfo.type || '';
             switch (type.toLowerCase()) {
                 case 'plugin':
                     if (componentInfo.scriptUrl) {
-                        component = new PluginComponent();
+                        component = new PluginComponent(entity);
                         var htmlPath = window.location.protocol + '//' + window.location.host + window.location.pathname;
                         htmlPath = htmlPath.slice(0, htmlPath.lastIndexOf('/'));
                         var absUrl = qtekUtil.relative2absolute(componentInfo.scriptUrl, htmlPath);
                         require([absUrl], function (context) {
                             component.setContext(context);
+                            component.setParameters(componentInfo.parameters);
+                            entity.addComponent(component);
                         });
-                        entity.addComponent(component);
                     }
                     else if (componentInfo.context) {
-                        component = new PluginComponent(componentInfo.context);
+                        component = new PluginComponent(entity, componentInfo.context);
+                        component.setParameters(componentInfo.parameters);
                         entity.addComponent(component);
                     }
                     break;
                 case 'animation':
-                    var component = new AnimationComponent();
+                    var component = new AnimationComponent(entity);
                     entity.addComponent(component);
                     qtekUtil.each(componentInfo.clips, function (clipInfo) {
-                        var clip = this._createAnimationClip(clipInfo);
+                        var clip = this._createAnimationClip(clipInfo, lib);
                         if (clip) {
                             component.addClip(clip);
-                            if (clipInfo.autoPlay) {
-                                component.playClip(clipInfo.name);
-                            }
+                        }
+                        if (clipInfo.autoPlay) {
+                            component.playClip(clipInfo.name);
                         }
                     }, this);
             }
         },
 
-        _createAnimationClip: function (clipInfo) {
+        _createAnimationClip: function (clipInfo, lib) {
             var type = clipInfo.type || '';
             switch (type.toLowerCase()) {
                 case 'skinning':
-                    return this._clipsMap[clipInfo.name];
+                    var clip = lib.clipsMap[clipInfo.name];
+                    clip.setLoop(clipInfo.loop);
+                    return clip;
                     break;
                 case 'blend':
                     var blendClip;
@@ -523,11 +541,11 @@ define(function (require) {
                             }
                     }
                     blendClip.name = clipInfo.name;
-                    blendClip.setLoop(true);
+                    blendClip.setLoop(clipInfo.loop);
 
                     var exampleClip;
                     for (var i = 0; i < clipInfo.inputClips.length; i++) {
-                        var inputClip = this._createAnimationClip(clipInfo.inputClips[i]);
+                        var inputClip = this._createAnimationClip(clipInfo.inputClips[i], lib);
                         if (inputClip) {
                             if (blendType === '2d') {
                                 var position = clipInfo.inputClips[i].position || [0, 0];

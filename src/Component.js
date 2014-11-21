@@ -6,6 +6,8 @@ define(function (require) {
 
     var Component = Clazz.derive({
         _entity: null
+    }, function (entity) {
+        this._entity = entity;
     }, {
         type: 'COMPONENT',
 
@@ -19,11 +21,8 @@ define(function (require) {
 
         /**
          * Initialize will be invoked when the component adding to entity
-         * @param  {qtekApp.Entity} entity
          */
-        $init: function (entity) {
-            this._entity = entity;
-        },
+        $init: function () {},
 
         $frame: function (frameTime) {
             this._frameTime = frameTime;

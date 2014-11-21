@@ -10,18 +10,25 @@ define(function (require) {
 
         _frameTime: 0,
 
-        _world: null,
+        _appInstance: null,
 
-        _sceneNode: null
+        _sceneNode: null,
 
-    }, function (sceneNode) {
+        _initialized: false
+
+    }, function (app3d, sceneNode) {
         this._components = [];
 
         this._sceneNode = sceneNode;
+
+        this._appInstance = app3d;
     }, {
 
-        $init: function (world) {
-            this._world = world;
+        $init: function () {
+            for (var i = 0; i < this._components.length; i++) {
+                this._components[i].$init();
+            }
+            this._initialized = true;
         },
 
         $frame: function (frameTime) {
@@ -44,7 +51,7 @@ define(function (require) {
         },
 
         $remove: function () {
-            this._world = null;
+            this._appInstance = null;
         },
 
         getSceneNode: function () {
@@ -59,16 +66,23 @@ define(function (require) {
         },
 
         getWorld: function () {
-            return this._world;
+            if (this._appInstance) {
+                return this._appInstance.getWorld();
+            }
         },
 
         getAppInstance: function () {
-            return this._world.getAppInstance();
+            return this._appInstance;
         },
 
         addComponent: function (component) {
-            component.$init(this);
-            this._components.push(component);
+            if (this._components.indexOf(component) < 0) {
+                this._components.push(component);
+            }
+            // Component is added after initialize
+            if (this._initialized) {
+                component.$init();
+            }
         },
 
         getComponentByType: function (type) {

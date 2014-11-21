@@ -1,3 +1,4 @@
+// TODO More convinient hierarchy management
 define(function (require) {
     
     var Clazz = require('./Clazz');
@@ -13,20 +14,29 @@ define(function (require) {
 
         _appInstance: null,
 
-        _entities: null
+        _entities: null,
 
-    }, function () {
+        _initialized: false
+
+    }, function (app3d) {
+        this._appInstance = app3d;
+
         this._scene = new Scene();
+
+        this._entities = [];
+
+        this._cameras = [];
     }, {
 
-        $init: function (app3d) {
-            this._appInstance = app3d;
+        $init: function () {
 
-            this._cameras = [];
+            for (var i = 0; i < this._entities.length; i++) {
+                this._entities[i].$init();
+            }
 
-            this._entities = [];
+            this._initialized = true;
 
-            this.trigger('init', app3d);
+            this.trigger('init');
         },
 
         $frame: function (frameTime) {
@@ -45,7 +55,7 @@ define(function (require) {
                 this._entities[i].$dispose();
             }
 
-            this.trigger('dispose', frameTime);
+            this.trigger('dispose');
         },
 
         $getEntities: function () {
@@ -85,12 +95,13 @@ define(function (require) {
         },
 
         addEntity: function (entity) {
-            // Have been added
-            if (entity.getWorld() === this) {
-                return;
+            if (this._entities.indexOf(entity) < 0) {
+                this._entities.push(entity);
             }
-            entity.$init(this);
-            this._entities.push(entity);
+            // Entity is added after initialize
+            if (this._initialized) {
+                entity.$init();
+            }
         },
 
         removeEntity: function (entity) {

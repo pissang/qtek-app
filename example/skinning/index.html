@@ -28,59 +28,64 @@
     <img id="qrcode" />
     <script src="../js/config.js"></script>
     <script>
-        require([
-            'qtek-app/App3D',
-            'skinning.world',
-            'socket.io'
-        ], function (App3D, world, io) {
-            var app = new App3D();
-            app.init(document.getElementById('main'));
-            app.loadWorld(world);
+    require([
+        'qtek-app/App3D',
+        'skinning.world',
+        'socket.io'
+    ], function (App3D, world, io) {
+        var app = new App3D();
+        app.init(document.getElementById('main'));
+        app.loadWorld(world);
 
-            window.addEventListener('resize', function () {
-                app.resize();
-            });
-
-            var IP = '192.168.100.152';
-            var socket = io.connect('http://' + IP + ':3000/');
-
-            socket.on('connect_error', function () {
-                console.log('连接服务器失败');
-                socket.disconnect();
-            });
-            socket.on('connection-id', function (id) {
-                console.log('connection id', id);
-            });
-            socket.emit('register', {
-                type: 'game'
-            });
-
-            socket.on('register-status', function (statusData) {
-                if (statusData.status === 'success') {
-                    document.getElementById('qrcode').src = 'http://ishowshao.com/phpqrcode/index.php?data=' + encodeURIComponent('http://' + IP + '/gamma/demo-remote.html?gameId=' + statusData.id);
-                    socket.on('control', function (data) {
-                        switch (data.type) { 
-                            case 'orientation':
-                                break;
-                            case 'motion':
-                                break;
-                            case 'stick0':
-                                stickX = data.data.x;
-                                stickY = data.data.y;
-
-                                app.broadcastEntityEvent('changeSpeed', stickX, stickY);
-                                break;
-                            case 'stick1':
-                                break;
-                            case 'button-a':
-                                break;
-                            case 'button-b':
-                                break;
-                        }
-                    });
-                }
-            });
+        window.addEventListener('resize', function () {
+            app.resize();
         });
+
+        var IP = '172.20.205.243';
+        var socket = io.connect('http://' + IP + ':3000/');
+
+        socket.on('connect_error', function () {
+            console.log('连接服务器失败');
+            socket.disconnect();
+        });
+        socket.on('connection-id', function (id) {
+            console.log('connection id', id);
+        });
+        socket.emit('register', {
+            type: 'game'
+        });
+
+        socket.on('register-status', function (statusData) {
+            if (statusData.status === 'success') {
+                document.getElementById('qrcode').src = 'http://ishowshao.com/phpqrcode/index.php?data=' + encodeURIComponent('http://' + IP + '/gamma/demo-remote.html?gameId=' + statusData.id);
+                socket.on('control', function (data) {
+                    switch (data.type) { 
+                        case 'orientation':
+                            break;
+                        case 'motion':
+                            break;
+                        case 'stick0':
+                            stickX = data.data.x;
+                            stickY = data.data.y;
+
+                            app.broadcastEntityEvent('changeSpeed', stickX, stickY);
+                            break;
+                        case 'stick1':
+                            stickX = data.data.x;
+                            stickY = data.data.y;
+
+                            app.broadcastEntityEvent('orbit', stickX, stickY);
+                            break;
+                        case 'button-a':
+                            break;
+                        case 'button-b':
+                            app.broadcastEntityEvent('jump');
+                            break;
+                    }
+                });
+            }
+        });
+    });
     </script>
 </body>
 </html>
