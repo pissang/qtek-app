@@ -101,6 +101,16 @@ define(function (require) {
                     component.$dispatchEvent.apply(component, arguments);
                 }
             }
+        },
+
+        clone: function (sceneNode) {
+            var entity = new Entity(this._appInstance, sceneNode || this._sceneNode.clone());
+
+            for (var i = 0; i < this._components.length; i++) {
+                entity.addComponent(this._components[i].clone(entity));
+            }
+
+            return entity;
         }
     });
 

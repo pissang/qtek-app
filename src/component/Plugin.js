@@ -9,11 +9,15 @@ define(function (require) {
         /**
          * Context can only be assigned on create
          */
-        _context: null
+        _context: null,
+
+        _ContextCtor: null
     }, function (entity, ContextCtor) {
         if (ContextCtor) {
             this._context = new ContextCtor();
         }
+
+        this._ContextCtor = ContextCtor;
     }, {
         type: 'PLUGIN',
 
@@ -60,6 +64,8 @@ define(function (require) {
 
         setContext: function (ContextCtor) {
             this._context = new ContextCtor();
+
+            this._ContextCtor = ContextCtor;
         },
 
         setParameters: function (parameters) {
@@ -77,6 +83,12 @@ define(function (require) {
             if (this._context && this._context[name]) {
                 this._context[name](this.getEntity());
             }
+        },
+
+        clone: function (entity) {
+            // TODO Paramters
+            var plugin = new PluginComponent(entity, this._ContextCtor);
+            return plugin;
         }
     });
 

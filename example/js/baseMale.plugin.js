@@ -18,37 +18,19 @@ define(function (require) {
 
             sideMaxSpeed: 0,
 
-            _orientationChanged: 0,
+            _stickX: 0,
+
+            _stickY: 0,
+
+            _jumping: false,
 
             init: function (entity) {
                 
             },
 
             frame: function (entity) {
-                if (this._orientationChanged && (this.speed.x > 0 || this.speed.y > 0)) {
-                    var world = entity.getWorld();
-                    var male = entity.getSceneNode();
-                    var cameraWorldTransform = world.getMainCamera().worldTransform;
-                    tmpM4.copy(cameraWorldTransform);
-                    var forward = cameraWorldTransform.forward.negate();
-                    var right = cameraWorldTransform.right.negate();
-                    forward.y = 0;
-                    right.y = 0;
-                    forward.normalize();
-                    right.normalize();
 
-                    male.worldTransform.forward = forward;
-                    male.worldTransform.right = right;
-                    male.worldTransform.up = Vector3.UP;
-                    male.decomposeWorldTransform();
-                    male.update(true);
-
-                    // Keep camera world transform
-                    cameraWorldTransform.copy(tmpM4);
-                    world.getMainCamera().decomposeWorldTransform();
-
-                    this._orientationChanged = false;
-                }
+                this._applyOrientationChange(entity);
 
                 var world = entity.getWorld();
                 var forward = world.getMainCamera().worldTransform.forward.normalize().negate();
@@ -62,7 +44,6 @@ define(function (require) {
             },
 
             dispose: function (entity) {
-                
             },
 
             onchangeSpeed: function (entity, x, y) {
@@ -92,16 +73,52 @@ define(function (require) {
             },
 
             onjump: function (entity) {
+                if (this._jumping) {
+                    return;
+                }
+                this._jumping = true;
+                var self = this;
                 var animationComponent = entity.getComponentByType('animation');
                 animationComponent.playClip('jump', true).ondestroy = function () {
+                    self._jumping = false;
                     // TODO Animation transition
                     // TODO Not override ondestroy method
                     animationComponent.playClip('move', true);
                 }
             },
 
-            onorbit: function () {
+            onorbit: function (entity, x, y) {
+                this._stickY = y;
+                this._stickX = x;
+
                 this._orientationChanged = true;
+            },
+
+            _applyOrientationChange: function (entity) {
+                if ((this._stickX !== 0 || this._stickY !== 0 || this._orientationChanged) && (this.speed.x !== 0 || this.speed.y !== 0)) {
+                    var world = entity.getWorld();
+                    var male = entity.getSceneNode();
+                    var cameraWorldTransform = world.getMainCamera().worldTransform;
+                    tmpM4.copy(cameraWorldTransform);
+                    var forward = cameraWorldTransform.forward.negate();
+                    var right = cameraWorldTransform.right.negate();
+                    forward.y = 0;
+                    right.y = 0;
+                    forward.normalize();
+                    right.normalize();
+
+                    male.worldTransform.forward = forward;
+                    male.worldTransform.right = right;
+                    male.worldTransform.up = Vector3.UP;
+                    male.decomposeWorldTransform();
+                    male.update(true);
+
+                    // Keep camera world transform
+                    cameraWorldTransform.copy(tmpM4);
+                    world.getMainCamera().decomposeWorldTransform();
+
+                    this._orientationChanged = false;
+                }
             }
         }
     }

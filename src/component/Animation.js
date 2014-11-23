@@ -6,23 +6,28 @@ define(function (require) {
 
     var AnimationComponent = Component.derive({
         
+        autoPlayClip : '',
+
         _currentPlayClip: null
         
-    }, function (entity) {
+    }, function () {
         
-        this._clips = {};
+        this._clipsMap = {};
 
         this._skeletons = [];
 
-        var sceneNode = entity.getSceneNode();
-
-        // TODO Hierarchy changed
-        sceneNode.traverse(this._findSkeletons, this);
     }, {
         type: 'ANIMATION',
 
         $init: function () {
             Component.prototype.$init.call(this);
+
+            var sceneNode = this._entity.getSceneNode();
+            sceneNode.traverse(this._findSkeletons, this);
+
+            if (this.autoPlayClip) {
+                this.playClip(this.autoPlayClip);
+            }
         },
 
         _findSkeletons: function (node) {
@@ -34,11 +39,11 @@ define(function (require) {
         },
 
         addClip: function (clip) {
-            this._clips[clip.name] = clip;
+            this._clipsMap[clip.name] = clip;
         },
 
         getClip: function (name) {
-            return this._clips[name];
+            return this._clipsMap[name];
         },
 
         playClip: function (name, fromStart) {
@@ -47,7 +52,7 @@ define(function (require) {
             }
             this.stopClip();
 
-            var clip = this._clips[name];
+            var clip = this._clipsMap[name];
             if (clip) {
                 var animation = this.getAppInstance().getAnimationInstance();
                 animation.addClip(clip);
@@ -89,6 +94,15 @@ define(function (require) {
         $dispose: function () {
             Component.prototype.$dispose.call(this);
             this.stopClip();
+        },
+
+        clone: function (entity) {
+            var component = Component.prototype.clone.call(this, entity);
+            for (var name in this._clipsMap) {
+                component.addClip(this._clipsMap[name].clone());
+            }
+            component.autoPlayClip = this.autoPlayClip;
+            return component;
         }
     });
 

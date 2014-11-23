@@ -16,7 +16,7 @@
         }
         #qrcode {
             position: absolute;
-            right: 20px;
+            left: 20px;
             top: 20px;
             width: 100px;
             height: 100px;
@@ -28,20 +28,27 @@
     <img id="qrcode" />
     <script src="../js/config.js"></script>
     <script>
+    require.config({
+        paths: {
+            'male.prefab': '../prefab/male.prefab'
+        }
+    });
     require([
         'qtek-app/App3D',
         'skinning.world',
+        'male.prefab',
         'socket.io'
-    ], function (App3D, world, io) {
+    ], function (App3D, worldConfig, malePrefabConfig, io) {
         var app = new App3D();
         app.init(document.getElementById('main'));
-        app.loadWorld(world);
+        app.loadWorld(worldConfig);
+        var malePrefab = app.loadPrefab(malePrefabConfig);
 
         window.addEventListener('resize', function () {
             app.resize();
         });
 
-        var IP = '172.20.205.243';
+        var IP = '192.168.101.204';
         var socket = io.connect('http://' + IP + ':3000/');
 
         socket.on('connect_error', function () {
@@ -76,15 +83,17 @@
 
                             app.broadcastEntityEvent('orbit', stickX, stickY);
                             break;
-                        case 'button-a':
-                            break;
-                        case 'button-b':
+                        case 'button-0':
                             app.broadcastEntityEvent('jump');
                             break;
                     }
                 });
             }
         });
+
+        setTimeout(function () {
+            app.instantiatePrefab(malePrefab);
+        }, 1000);
     });
     </script>
 </body>

@@ -23,7 +23,9 @@ define(function (require) {
 
         _resourceManger: null,
 
-        _graphicManager: null
+        _graphicManager: null,
+
+        _prefabs: []
     }, {
 
         init: function (el) {
@@ -84,6 +86,20 @@ define(function (require) {
             }
         },
 
+        loadPrefab: function (config, onsuccess) {
+            var self = this;
+            var prefab = this._resourceManger.loadPrefab(config, function () {
+
+                self._prefabs.push(prefab);
+
+                onsuccess && onsuccess(prefab);
+
+                self.trigger('loadprefab', prefab);
+            });
+
+            return prefab;
+        },
+
         getWorld: function () {
             return this._currentWorld;
         },
@@ -124,6 +140,18 @@ define(function (require) {
                     entities[i].trigger.apply(entities[i], arguments);
                     entities[i].broadcastComponentEvent.apply(entities[i], arguments);
                 }
+            }
+        },
+
+        instantiatePrefab: function (prefab) {
+            if (this._currentWorld) {
+                var instance = prefab.$instantiate(this._currentWorld);
+                instance.entities.forEach(function (entity) {
+                    this._currentWorld.addEntity(entity);
+                }, this);
+                this._currentWorld.getScene().add(instance.rootNode);
+
+                return instance;
             }
         }
     });

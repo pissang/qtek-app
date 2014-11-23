@@ -59,7 +59,7 @@ define(function (require) {
             this._shaderLibrary = shaderLibrary.createLibrary();
         },
 
-        loadWorld: function (config) {
+        loadWorld: function (config, onsuccess) {
 
             var world = new World(this._appInstance);
 
@@ -72,6 +72,47 @@ define(function (require) {
                 cameras: []
             };
 
+            var self = this;
+
+            this._loadCommon(config, lib, function () {
+                self._createWorldOtherAfterLoad(config, lib, world);
+
+                world.$init();
+
+                self.trigger('loadworld', world);
+
+                onsuccess && onsuccess(world);
+            });
+            return world;
+        },
+
+        loadPrefab: function (config, onsuccess) {
+            var prefab = new Prefab(config.name);
+
+            var lib = {
+                clipsMap: {},
+                materialsMap: {},
+                texturesMap: {},
+                rootNode: prefab.getRootNode(),
+                entities: []
+            };
+
+            var self = this;
+
+            this._loadCommon(config, lib, function () {
+
+                self._createPrefabOtherAfterLoad(config, lib, prefab);
+
+                onsuccess && onsuccess(prefab);
+
+                self.trigger('loadprefab', prefab);
+                
+            });
+
+            return prefab;
+        },
+
+        _loadCommon: function (config, lib, cb) {
             var tasks = [];
             var loadingTextures = [];
             if (config.textures) {
@@ -117,28 +158,9 @@ define(function (require) {
                 });
                 var textureTask = new TaskGroup().allSettled(loadingTextures);
                 textureTask.success(function () {
-                    this._initializeAfterLoad(config, lib);
-
-                    lib.cameras.forEach(function (camera) {
-                        world.addCamera(camera);
-                    });
-                    lib.entities.forEach(function (entity) {
-                        world.addEntity(entity);
-                    });
-
-                    world.setMainCamera(config.mainCamera);
-
-                    world.$init();
-
-                    this.trigger('load');
+                    cb && cb();
                 }, this);
             }, this);
-
-            return world;
-        },
-
-        loadPrefab: function () {
-
         },
 
         _loadTextures: function (textures, lib) {
@@ -329,7 +351,7 @@ define(function (require) {
             return clipLoaders;
         },
 
-        _initializeAfterLoad: function (config, lib) {
+        _createWorldOtherAfterLoad: function (config, lib, world) {
 
             this._createLights(config.lights, lib);
 
@@ -337,7 +359,28 @@ define(function (require) {
 
             this._createEntities(config.entities, lib);
 
-            this._appInstance.setGraphic(config.graphic, lib);
+            if (config.graphic) {
+                this._appInstance.setGraphic(config.graphic);
+            }
+
+            lib.cameras.forEach(function (camera) {
+                world.addCamera(camera);
+            });
+            lib.entities.forEach(function (entity) {
+                world.addEntity(entity);
+            });
+
+            world.setMainCamera(config.mainCamera);
+        },
+
+        _createPrefabOtherAfterLoad: function (config, lib, prefab) {
+            this._createLights(config.lights, lib);
+
+            this._createEntities(config.entities, lib);
+
+            lib.entities.forEach(function (entity) {
+                prefab.addEntity(entity); 
+            });
         },
 
         _createCameras: function (cameras, lib) {
@@ -509,7 +552,7 @@ define(function (require) {
                             component.addClip(clip);
                         }
                         if (clipInfo.autoPlay) {
-                            component.playClip(clipInfo.name);
+                            component.autoPlayClip = clipInfo.name;
                         }
                     }, this);
             }

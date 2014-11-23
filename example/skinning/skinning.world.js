@@ -104,7 +104,7 @@ define({
                 inputClips: [{
                     name: 'run',
                     type: 'skinning',
-                    position: [0, 10]
+                    position: [0, 8]
                 }, {
                     name: 'strafeLeft',
                     type: 'skinning',
@@ -128,7 +128,7 @@ define({
             type: 'plugin',
             scriptUrl: '../js/baseMale.plugin.js',
             parameters: {
-                forwardMaxSpeed: 10,
+                forwardMaxSpeed: 8,
                 sideMaxSpeed: 3
             }
         }]

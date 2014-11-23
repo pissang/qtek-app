@@ -32,7 +32,11 @@ define(function (require) {
             this._entity = null;
         },
 
-        $dispatchEvent: null
+        $dispatchEvent: null,
+
+        clone: function (entity) {
+            return new this.constructor(entity);
+        }
     });
 
     return Component;
