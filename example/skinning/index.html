@@ -61,6 +61,7 @@
         socket.emit('register', {
             type: 'game'
         });
+        socket.on('')
 
         socket.on('register-status', function (statusData) {
             if (statusData.status === 'success') {
@@ -90,10 +91,6 @@
                 });
             }
         });
-
-        setTimeout(function () {
-            app.instantiatePrefab(malePrefab);
-        }, 1000);
     });
     </script>
 </body>

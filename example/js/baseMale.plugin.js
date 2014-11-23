@@ -46,7 +46,7 @@ define(function (require) {
             dispose: function (entity) {
             },
 
-            onchangeSpeed: function (entity, x, y) {
+            changeSpeed: function (entity, x, y) {
                 var b2 = this.forwardMaxSpeed;
                 var a2 = this.sideMaxSpeed;
 
@@ -72,7 +72,7 @@ define(function (require) {
                 this.speed.copy(clampedSpeed);
             },
 
-            onjump: function (entity) {
+            jump: function (entity) {
                 if (this._jumping) {
                     return;
                 }
@@ -87,7 +87,7 @@ define(function (require) {
                 }
             },
 
-            onorbit: function (entity, x, y) {
+            orbit: function (entity, x, y) {
                 this._stickY = y;
                 this._stickX = x;
 

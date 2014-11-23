@@ -33,7 +33,7 @@ define(function (require) {
                 }
             },
 
-            onorbit: function (entity, x, y) {
+            orbit: function (entity, x, y) {
                 this._stickY = y;
                 this._stickX = x;
             }

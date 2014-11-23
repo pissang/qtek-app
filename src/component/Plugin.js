@@ -37,7 +37,6 @@ define(function (require) {
         },
 
         $dispatchEvent: function (name) {
-            name = 'on' + name;
             if (this._context && this._context[name]) {
                 var args = arguments;
                 var handler = this._context[name];
