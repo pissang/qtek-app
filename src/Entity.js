@@ -1,3 +1,4 @@
+// TODO Can only have one animation component.
 define(function (require) {
 
     'use strict';
@@ -76,13 +77,23 @@ define(function (require) {
         },
 
         addComponent: function (component) {
-            if (this._components.indexOf(component) < 0) {
-                this._components.push(component);
+            if (
+                this._components.indexOf(component) >= 0 ||
+                (component.unique && this.getComponentByType(component.type))
+            ) {
+                return;
             }
+            
+            this._components.push(component);
             // Component is added after initialize
             if (this._initialized) {
                 component.$init();
             }
+        },
+
+        removeComponent: function (component) {
+            this._components.splice(this._components.indexOf(component), 1);
+            component.$dispose();
         },
 
         getComponentByType: function (type) {
@@ -111,6 +122,14 @@ define(function (require) {
             }
 
             return entity;
+        },
+
+        registerMethod: function (name, func) {
+            this[name] = func;
+        },
+
+        unregisterMethod: function (name) {
+            delete this[name];
         }
     });
 

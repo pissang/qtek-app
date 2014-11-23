@@ -79,10 +79,12 @@ define(function (require) {
 
                 world.$init();
 
-                self.trigger('loadworld', world);
-
                 onsuccess && onsuccess(world);
+                world.trigger('success');
+
+                self.trigger('loadworld', world);
             });
+
             return world;
         },
 
@@ -104,9 +106,9 @@ define(function (require) {
                 self._createPrefabOtherAfterLoad(config, lib, prefab);
 
                 onsuccess && onsuccess(prefab);
+                prefab.trigger('success');
 
                 self.trigger('loadprefab', prefab);
-                
             });
 
             return prefab;

@@ -126,11 +126,14 @@ define({
             }]
         }, {
             type: 'plugin',
-            scriptUrl: '../js/baseMale.plugin.js',
+            scriptUrl: '../js/baseMaleControl.plugin.js',
             parameters: {
                 forwardMaxSpeed: 8,
                 sideMaxSpeed: 3
             }
+        }, {
+            type: 'plugin',
+            scriptUrl: 'user.plugin.js'
         }]
     }, {
         sceneNodePath: 'baseMale/mainCamera',

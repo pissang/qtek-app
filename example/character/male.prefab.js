@@ -57,7 +57,7 @@ define({
             }]
         }, {
             type: 'plugin',
-            scriptUrl: '../js/character.plugin.js'
+            scriptUrl: 'character.plugin.js'
         }]
     }]
 });

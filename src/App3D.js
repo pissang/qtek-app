@@ -41,7 +41,6 @@ define(function (require) {
             this._graphicManager.$init(this);
 
             el.appendChild(this._renderer.canvas);
-            this._animation.start();
 
             this._animation.on('frame', this._frame, this);
 
@@ -77,6 +76,8 @@ define(function (require) {
             var world = this._resourceManger.loadWorld(config);
 
             this._currentWorld = world;
+
+            return world;
         },
 
         unloadWorld: function () {
@@ -86,15 +87,11 @@ define(function (require) {
             }
         },
 
-        loadPrefab: function (config, onsuccess) {
+        loadPrefab: function (config) {
             var self = this;
             var prefab = this._resourceManger.loadPrefab(config, function () {
 
                 self._prefabs.push(prefab);
-
-                onsuccess && onsuccess(prefab);
-
-                self.trigger('loadprefab', prefab);
             });
 
             return prefab;
@@ -112,6 +109,14 @@ define(function (require) {
             if (config.postProcessing) {
                 this._graphicManager.setPostProcessing(config.postProcessing);
             }
+        },
+
+        start: function () {
+            this._animation.start();
+        },
+
+        stop: function () {
+            this._animation.stop();
         },
 
         _frame: function (frameTime) {

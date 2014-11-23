@@ -50,12 +50,11 @@ define(function (require) {
         },
 
         $dispose: function () {
-            
-            this._appInstance.getRenderer().disposeScene(this._scene);
-
             for (var i = 0; i < this._entities.length; i++) {
                 this._entities[i].$dispose();
             }
+
+            this._appInstance.getRenderer().disposeScene(this._scene);
 
             this.trigger('dispose');
         },
@@ -136,7 +135,7 @@ define(function (require) {
                 entity.$dispose();
                 this.removeEntity(entity);
             }, this);
-            this._appInstance.getRenderer().disposeNode(instance.getRootNode());
+            this._appInstance.getRenderer().disposeNode(instance.getRootNode(), false, false);
             instance.$dispose();
         }
     });

@@ -38,12 +38,15 @@ define(function (require) {
                 var right = world.getMainCamera().worldTransform.right.normalize();
                 right.y = 0;
 
-                var male = entity.getSceneNode();
-                male.position.scaleAndAdd(forward, this.speed.y * entity.getFrameTime() / 10);
-                male.position.scaleAndAdd(right, this.speed.x * entity.getFrameTime() / 10);
+                if (this.speed.x !== 0 || this.speed.y !== 0) {
+                    var male = entity.getSceneNode();
+                    male.position.scaleAndAdd(forward, this.speed.y * entity.getFrameTime() / 10);
+                    male.position.scaleAndAdd(right, this.speed.x * entity.getFrameTime() / 10);
+                }
             },
 
             dispose: function (entity) {
+
             },
 
             changeSpeed: function (entity, x, y) {
@@ -67,8 +70,7 @@ define(function (require) {
                 if (lenSquared < this.speed.squaredLength()) {
                     clampedSpeed.normalize().scale(Math.sqrt(lenSquared) - 0.01);
                 }
-                var animationComponent = entity.getComponentByType('animation');
-                animationComponent.getClip('move').position.copy(clampedSpeed);
+                entity.getAnimationClip('move').position.copy(clampedSpeed);
                 this.speed.copy(clampedSpeed);
             },
 
@@ -78,12 +80,11 @@ define(function (require) {
                 }
                 this._jumping = true;
                 var self = this;
-                var animationComponent = entity.getComponentByType('animation');
-                animationComponent.playClip('jump', true).ondestroy = function () {
+                entity.playAnimationClip('jump', true).ondestroy = function () {
                     self._jumping = false;
                     // TODO Animation transition
                     // TODO Not override ondestroy method
-                    animationComponent.playClip('move', true);
+                    entity.playAnimationClip('move', true);
                 }
             },
 
@@ -93,7 +94,7 @@ define(function (require) {
 
                 this._orientationChanged = true;
             },
-
+            
             _applyOrientationChange: function (entity) {
                 if ((this._stickX !== 0 || this._stickY !== 0 || this._orientationChanged) && (this.speed.x !== 0 || this.speed.y !== 0)) {
                     var world = entity.getWorld();

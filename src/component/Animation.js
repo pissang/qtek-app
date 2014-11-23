@@ -10,14 +10,26 @@ define(function (require) {
 
         _currentPlayClip: null
         
-    }, function () {
+    }, function (entity) {
         
         this._clipsMap = {};
 
         this._skeletons = [];
 
+        var self = this;
+        entity.registerMethod('getAnimationClip', function (name) {
+            return self._clipsMap[name];
+        });
+        entity.registerMethod('playAnimationClip', function (name, fromStart) {
+            return self.playClip(name, fromStart);
+        });
+        entity.registerMethod('stopAnimationClip', function () {
+            return self.stopClip();
+        });
     }, {
         type: 'ANIMATION',
+
+        unique: true,
 
         $init: function () {
             Component.prototype.$init.call(this);
@@ -92,8 +104,12 @@ define(function (require) {
         },
 
         $dispose: function () {
+            this._entity.unregisterMethod('getAnimationClip');
+            this._entity.unregisterMethod('playAnimationClip');
+            this._entity.unregisterMethod('stopAnimationClip');
+
             this.stopClip();
-            
+
             Component.prototype.$dispose.call(this);
         },
 
