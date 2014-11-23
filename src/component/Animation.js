@@ -92,8 +92,9 @@ define(function (require) {
         },
 
         $dispose: function () {
-            Component.prototype.$dispose.call(this);
             this.stopClip();
+            
+            Component.prototype.$dispose.call(this);
         },
 
         clone: function (entity) {

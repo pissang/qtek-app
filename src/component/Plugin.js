@@ -32,8 +32,8 @@ define(function (require) {
         },
 
         $dispose: function () {
-            Component.prototype.$dispose.call(this);
             this._invokeContextMethod('dispose');
+            Component.prototype.$dispose.call(this);
         },
 
         $dispatchEvent: function (name) {

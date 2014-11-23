@@ -89,8 +89,27 @@
                             break;
                     }
                 });
+
+                socket.on('other-join', function (data) {
+                    
+                });
+
+                socket.on('other-sync', function (data) {
+
+                })
             }
         });
+    
+        var flag = true;
+        var instance = null;
+        setInterval(function () {
+            if (flag) {
+                instance = app.getWorld().instantiatePrefab(malePrefab);
+            } else {
+                app.getWorld().destroyPrefabInstance(instance);
+            }
+            flag = !flag;
+        }, 1000);
     });
     </script>
 </body>

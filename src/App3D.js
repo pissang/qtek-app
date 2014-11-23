@@ -141,18 +141,6 @@ define(function (require) {
                     entities[i].broadcastComponentEvent.apply(entities[i], arguments);
                 }
             }
-        },
-
-        instantiatePrefab: function (prefab) {
-            if (this._currentWorld) {
-                var instance = prefab.$instantiate(this._currentWorld);
-                instance.entities.forEach(function (entity) {
-                    this._currentWorld.addEntity(entity);
-                }, this);
-                this._currentWorld.getScene().add(instance.rootNode);
-
-                return instance;
-            }
         }
     });
 

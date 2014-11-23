@@ -16,6 +16,8 @@ define(function (require) {
 
         _entities: null,
 
+        _prefabInstances: [],
+
         _initialized: false
 
     }, function (app3d) {
@@ -117,6 +119,25 @@ define(function (require) {
 
         getAppInstance: function () {
             return this._appInstance;
+        },
+
+        instantiatePrefab: function (prefab) {
+            var instance = prefab.$instantiate(this);
+            instance.getEntities().forEach(function (entity) {
+                this.addEntity(entity);
+            }, this);
+            this._scene.add(instance.getRootNode());
+
+            return instance;
+        },
+
+        destroyPrefabInstance: function (instance) {
+            instance.getEntities().forEach(function (entity) {
+                entity.$dispose();
+                this.removeEntity(entity);
+            }, this);
+            this._appInstance.getRenderer().disposeNode(instance.getRootNode());
+            instance.$dispose();
         }
     });
 

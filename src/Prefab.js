@@ -1,7 +1,31 @@
 define(function (require) {
 
+    'use strict';
+
     var Clazz = require('./Clazz');
     var Node = require('qtek/Node');
+
+    function PrefabInstance(prefab, entities, rootNode) {
+        this._entities = entities;
+        this._rootNode = rootNode;
+        this._prefab = prefab;
+    }
+
+    PrefabInstance.prototype.getRootNode = function () {
+        return this._rootNode;
+    };
+
+    PrefabInstance.prototype.getEntities = function () {
+        return this._entities;
+    };
+
+    PrefabInstance.prototype.getPrefab = function () {
+        return this._prefab;
+    };
+
+    PrefabInstance.prototype.$dispose = function () {
+        this._prefab.$destroyInstance(this);
+    }
 
     var Prefab = Clazz.derive({
         
@@ -51,10 +75,11 @@ define(function (require) {
 
             this._instanceCount++;
 
-            return {
-                entities: entities,
-                rootNode: rootNode
-            };
+            return new PrefabInstance(this, entities, rootNode);
+        },
+
+        $destroyInstance: function (instance) {
+            this._instanceCount--;
         },
 
         getRootNode: function () {

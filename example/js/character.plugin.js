@@ -15,13 +15,23 @@ define(function (require) {
                     if (mesh.material) {
                         mesh.material.set('color', color);
                     }
-                });              
+                });     
             },
 
             frame: function (entity) {
             },
 
             dispose: function (entity) {
+            },
+
+            updatePositionAndRotation: function (entity, position, rotation) {
+                var sceneNode = entity.getSceneNode();
+                sceneNode.position.setArray(position);
+                sceneNode.rotation.setArray(rotation);
+            },
+
+            jump: function () {
+
             }
         }
     }
