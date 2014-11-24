@@ -1,0 +1,304 @@
+{
+    "accessors": {
+        "attrbute_1": {
+            "bufferView": "bufferView_9",
+            "byteOffset": 0,
+            "byteStride": 12,
+            "count": 70,
+            "max": [
+                1.433653,
+                2.775682,
+                0.117166,
+                0.0
+            ],
+            "min": [
+                -4.077029,
+                -2.102948,
+                -1e-06,
+                0.0
+            ],
+            "type": 35665
+        },
+        "attrbute_2": {
+            "bufferView": "bufferView_9",
+            "byteOffset": 840,
+            "byteStride": 12,
+            "count": 70,
+            "max": [
+                1.0,
+                0.999866,
+                1.0,
+                0.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -0.000257,
+                0.0
+            ],
+            "type": 35665
+        },
+        "attrbute_3": {
+            "bufferView": "bufferView_9",
+            "byteOffset": 1680,
+            "byteStride": 8,
+            "count": 70,
+            "max": [
+                0.791372,
+                0.735514
+            ],
+            "min": [
+                0.005279,
+                0.003538
+            ],
+            "type": 35664
+        },
+        "attrbute_5": {
+            "bufferView": "bufferView_9",
+            "byteOffset": 2240,
+            "byteStride": 12,
+            "count": 3886,
+            "max": [
+                4.222468,
+                2.960295,
+                10.069531,
+                0.0
+            ],
+            "min": [
+                -4.222468,
+                -2.960299,
+                -1e-06,
+                0.0
+            ],
+            "type": 35665
+        },
+        "attrbute_6": {
+            "bufferView": "bufferView_9",
+            "byteOffset": 48872,
+            "byteStride": 12,
+            "count": 3886,
+            "max": [
+                1.0,
+                1.0,
+                1.0,
+                0.0
+            ],
+            "min": [
+                -1.0,
+                -1.0,
+                -1.0,
+                0.0
+            ],
+            "type": 35665
+        },
+        "attrbute_7": {
+            "bufferView": "bufferView_9",
+            "byteOffset": 95504,
+            "byteStride": 8,
+            "count": 3886,
+            "max": [
+                0.997141,
+                0.996159
+            ],
+            "min": [
+                0.005279,
+                0.003538
+            ],
+            "type": 35664
+        },
+        "indices_4": {
+            "bufferView": "bufferView_10",
+            "byteOffset": 0,
+            "count": 102,
+            "type": 5123
+        },
+        "indices_8": {
+            "bufferView": "bufferView_10",
+            "byteOffset": 204,
+            "count": 6960,
+            "type": 5123
+        }
+    },
+    "animations": {},
+    "asset": {},
+    "bufferViews": {
+        "bufferView_10": {
+            "buffer": "SanFranciscoHouse.bin",
+            "byteLength": 14124,
+            "byteOffset": 126592,
+            "target": 34963
+        },
+        "bufferView_9": {
+            "buffer": "SanFranciscoHouse.bin",
+            "byteLength": 126592,
+            "byteOffset": 0,
+            "target": 34962
+        }
+    },
+    "buffers": {
+        "SanFranciscoHouse.bin": {
+            "byteLength": 140716,
+            "path": "SanFranciscoHouse.bin"
+        }
+    },
+    "cameras": {},
+    "images": {
+        "image_0": {
+            "path": "textures/houseSF.png"
+        }
+    },
+    "lights": {},
+    "materials": {
+        "lambert57SG__houseSF_tga": {
+            "instanceTechnique": {
+                "technique": "technique_0",
+                "values": {
+                    "ambient": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ],
+                    "diffuse": "houseSF_tga",
+                    "emission": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ],
+                    "transparency": 1
+                }
+            },
+            "name": "lambert57SG__houseSF_tga"
+        }
+    },
+    "meshes": {
+        "polySurface2052-mesh": {
+            "name": "polySurface2052-mesh",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "attrbute_2",
+                        "POSITION": "attrbute_1",
+                        "TEXCOORD_0": "attrbute_3"
+                    },
+                    "indices": "indices_4",
+                    "material": "lambert57SG__houseSF_tga"
+                }
+            ]
+        },
+        "polySurface2129-mesh": {
+            "name": "polySurface2129-mesh",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": "attrbute_6",
+                        "POSITION": "attrbute_5",
+                        "TEXCOORD_0": "attrbute_7"
+                    },
+                    "indices": "indices_8",
+                    "material": "lambert57SG__houseSF_tga"
+                }
+            ]
+        }
+    },
+    "nodes": {
+        "polySurface2052": {
+            "children": [],
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.6291842269127852e-07,
+                -0.9999999999999867,
+                0.0,
+                0.0,
+                0.9999999999999867,
+                -1.6291842269127852e-07,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "meshes": [
+                "polySurface2052-mesh"
+            ],
+            "name": "polySurface2052"
+        },
+        "polySurface2129": {
+            "children": [],
+            "matrix": [
+                1.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                -1.6291842269127852e-07,
+                -0.9999999999999867,
+                0.0,
+                0.0,
+                0.9999999999999867,
+                -1.6291842269127852e-07,
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                1.0
+            ],
+            "meshes": [
+                "polySurface2129-mesh"
+            ],
+            "name": "polySurface2129"
+        }
+    },
+    "samplers": {
+        "sampler_0": {
+            "magFilter": 9729,
+            "minFilter": 9987,
+            "wrapS": 10497,
+            "wrapT": 10497
+        }
+    },
+    "scene": "scene_0",
+    "scenes": {
+        "scene_0": {
+            "nodes": [
+                "polySurface2052",
+                "polySurface2129"
+            ]
+        }
+    },
+    "shaders": {},
+    "skins": {},
+    "techniques": {
+        "technique_0": {
+            "parameters": {},
+            "pass": "defaultPass",
+            "passes": {
+                "defaultPass": {
+                    "instanceProgram": {
+                        "attributes": {},
+                        "program": "",
+                        "uniforms": {}
+                    },
+                    "states": {
+                        "blendEnable": false,
+                        "cullFaceEnable": false,
+                        "depthMask": true,
+                        "depthTestEnable": true
+                    }
+                }
+            }
+        }
+    },
+    "textures": {
+        "houseSF_tga": {
+            "format": 6408,
+            "internalFormat": 6408,
+            "sampler": "sampler_0",
+            "source": "image_0",
+            "target": 3553
+        }
+    }
+}

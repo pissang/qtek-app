@@ -6,6 +6,7 @@ define(function (require) {
     var EnvironmentMapPass = require('qtek/prePass/EnvironmentMap');
     var FXLoader = require('qtek/loader/FX');
     var CompositorSceneNode = require('qtek/compositor/SceneNode');
+    var Texture = require('qtek/Texture');
 
     var GraphicManager = Clazz.derive({
 
@@ -42,7 +43,7 @@ define(function (require) {
             if (this._shadowMapPass && this._debugShadow) {
                 var clear = renderer.clear;
                 renderer.clear = Renderer.DEPTH_BUFFER_BIT;
-                this._shadowMapPass.renderDebug(renderer, 200);
+                this._shadowMapPass.renderDebug(renderer, 100);
                 renderer.clear = clear;
             }
         },
@@ -55,7 +56,7 @@ define(function (require) {
                     if (config.softShadow != null) {
                         this._shadowMapPass = ShadowMapPass[config.softShadow];
                     }
-                    ['shadowBlur', 'shadowCascade', 'cascadeSplitLogFactor'].forEach(function (propName) {
+                    ['shadowBlur', 'shadowCascade', 'cascadeSplitLogFactor', 'lightFrustumBias'].forEach(function (propName) {
                         if (config[propName] != null) {
                             this._shadowMapPass[propName] = config[propName];
                         }
@@ -80,7 +81,42 @@ define(function (require) {
             this._compositor = fxLoader.parse(config);
 
             this._compositorSceneNode = new CompositorSceneNode({
-                name: 'scene'
+                name: 'scene',
+                outputs: {
+                    color : {
+                        parameters : {
+                            width : function(renderer) {
+                                return renderer.width;
+                            },
+                            height : function(renderer) {
+                                return renderer.height;
+                            },
+                            type : Texture.HALF_FLOAT
+                        }
+                    }
+                }
+            });
+            this._compositor.addNode(this._compositorSceneNode);
+        },
+
+        setCompositor: function (compositor) {
+            var renderer = this._appInstance.getRenderer();
+            if (this._compositor) {
+                this._compositor.dispose(renderer); 
+            }
+            this._compositorSceneNode = new CompositorSceneNode({
+                name: 'scene',
+                color : {
+                    parameters : {
+                        width : function(renderer) {
+                            return renderer.width;
+                        },
+                        height : function(renderer) {
+                            return renderer.height;
+                        },
+                        type : Texture.HALF_FLOAT
+                    }
+                }
             });
             this._compositor.addNode(this._compositorSceneNode);
         }

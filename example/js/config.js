@@ -1,8 +1,9 @@
 require.config({
     paths : {
         'glmatrix' : '../../../qtek/thirdparty/gl-matrix',
-        'text': '../js/text',
-        'socket.io': '../dep/socket.io'
+        'text': '../dep/text',
+        'socket.io': '../dep/socket.io',
+        'matter': '../dep/matter'
     },
     packages: [{
         name: 'qtek',
@@ -12,5 +13,9 @@ require.config({
         name: 'qtek-app',
         location: '../../src',
         main: 'qtek-app.amd'
+    }, {
+        name: 'qtek-physics',
+        location: '../../../qtek-physics/src',
+        main: 'qtek-physics.amd'
     }]
 });

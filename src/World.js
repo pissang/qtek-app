@@ -3,6 +3,7 @@ define(function (require) {
     
     var Clazz = require('./Clazz');
     var Scene = require('qtek/Scene');
+    var Skybox = require('qtek/plugin/Skybox');
 
     var World = Clazz.derive({
 
@@ -18,7 +19,9 @@ define(function (require) {
 
         _prefabInstances: [],
 
-        _initialized: false
+        _initialized: false,
+
+        _skybox: null
 
     }, function (app3d) {
         this._appInstance = app3d;
@@ -31,6 +34,8 @@ define(function (require) {
     }, {
 
         $init: function () {
+
+            this._scene.update(true);
 
             for (var i = 0; i < this._entities.length; i++) {
                 this._entities[i].$init();
@@ -79,6 +84,19 @@ define(function (require) {
                 }
             }
             this._mainCamera = camera;
+        },
+
+        setSkybox: function (skyboxTexture) {
+            if (!this._skybox) {
+                this._skybox = new Skybox({
+                    scene: this._scene
+                });
+            }
+            this._skybox.material.set('environmentMap', skyboxTexture);
+        },
+
+        removeSkybox: function () {
+
         },
 
         getCamera: function (name) {

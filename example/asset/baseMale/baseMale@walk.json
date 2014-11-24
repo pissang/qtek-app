@@ -3174,24 +3174,24 @@
         },
         "bufferView_176": {
             "buffer": "baseMale@walk.bin",
-            "byteLength": 2624,
+            "byteLength": 2688,
             "byteOffset": 205380
         },
         "bufferView_177": {
             "buffer": "baseMale@walk.bin",
             "byteLength": 55440,
-            "byteOffset": 208004
+            "byteOffset": 208068
         },
         "bufferView_178": {
             "buffer": "baseMale@walk.bin",
             "byteLength": 35268,
-            "byteOffset": 263444,
+            "byteOffset": 263508,
             "target": 34963
         }
     },
     "buffers": {
         "baseMale@walk.bin": {
-            "byteLength": 298712,
+            "byteLength": 298776,
             "path": "baseMale@walk.bin"
         }
     },
@@ -4402,7 +4402,8 @@
                 "Bip01 R Finger0",
                 "Bip01 R Calf",
                 "Bip01 R Foot",
-                "Bip01 R Toe0"
+                "Bip01 R Toe0",
+                "Bip01"
             ]
         }
     },

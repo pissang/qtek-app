@@ -31,7 +31,9 @@ define(function (require) {
         init: function (el) {
             this._el = el;
 
-            this._renderer = new Renderer();
+            this._renderer = new Renderer({
+                devicePixelRatio: 1.0
+            });
             this._animation = new Animation();
 
             this._resourceManger = new ResourceManager();
@@ -109,6 +111,10 @@ define(function (require) {
             if (config.postProcessing) {
                 this._graphicManager.setPostProcessing(config.postProcessing);
             }
+        },
+
+        setCompositor: function (compositor) {
+            
         },
 
         start: function () {

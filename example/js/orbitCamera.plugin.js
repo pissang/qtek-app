@@ -15,7 +15,7 @@ define(function (require) {
 
                 this._orbitControl = new OrbitControl({
                     domElement: document.body,
-                    maxPolarAngle : Math.PI / 2,
+                    maxPolarAngle : Math.PI / 1.7,
                     minPolarAngle : 1,
                     target: camera
                 });

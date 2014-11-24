@@ -2,6 +2,7 @@ define(function (require) {
    
     var Base = require('qtek/core/Base');
     var GLTFLoader = require('qtek/loader/GLTF');
+    var FXLoader = require('qtek/loader/FX');
     var DirectionalLight = require('qtek/light/Directional');
     var PointLight = require('qtek/light/Point');
     var SpotLight = require('qtek/light/Spot');
@@ -15,6 +16,7 @@ define(function (require) {
     var Material = require('qtek/Material');
     var Shader = require('qtek/Shader');
     var shaderLibrary = require('qtek/shader/library');
+    var request = require('qtek/core/request');
 
     var SkinningClip = require('qtek/animation/SkinningClip');
     var Blend1DClip = require('qtek/animation/Blend1DClip');
@@ -75,15 +77,39 @@ define(function (require) {
             var self = this;
 
             this._loadCommon(config, lib, function () {
-                self._createWorldOtherAfterLoad(config, lib, world);
 
-                world.$init();
-
-                onsuccess && onsuccess(world);
-                world.trigger('success');
-
-                self.trigger('loadworld', world);
+                if (config.graphic && config.graphic.postProcessingUrl) {
+                    request.get({
+                        url: config.graphic.postProcessingUrl,
+                        onload: function (data) {
+                            config.graphic.postProcessing = JSON.parse(data);
+                            afterLoad();
+                        }
+                    });
+                } else {
+                    afterLoad();
+                }
             });
+
+            var afterLoad = function () {
+                self._createWorldOtherAfterLoad(config, lib, world, function () {
+                    world.$init();
+
+                    if (config.skybox) {
+                        if (config.skybox.texture && config.skybox.texture.indexOf('#') === 0) {
+                            var texture = lib.texturesMap[config.skybox.texture.slice(1)];
+                            if (texture) {
+                                world.setSkybox(texture);
+                            }
+                        }
+                    }
+
+                    onsuccess && onsuccess(world);
+                    world.trigger('success');
+
+                    self.trigger('loadworld', world);
+                });
+            }
 
             return world;
         },
@@ -103,12 +129,13 @@ define(function (require) {
 
             this._loadCommon(config, lib, function () {
 
-                self._createPrefabOtherAfterLoad(config, lib, prefab);
+                self._createPrefabOtherAfterLoad(config, lib, prefab, function () {
 
-                onsuccess && onsuccess(prefab);
-                prefab.trigger('success');
+                    onsuccess && onsuccess(prefab);
+                    prefab.trigger('success');
 
-                self.trigger('loadprefab', prefab);
+                    self.trigger('loadprefab', prefab);                    
+                });
             });
 
             return prefab;
@@ -172,7 +199,10 @@ define(function (require) {
                 var texture;
                 switch (target.toLowerCase()) {
                     case 'cube':
-                        texture = new TextureCube();
+                        texture = new TextureCube({
+                            width: textureInfo.width || 512,
+                            height: textureInfo.height || 512,
+                        });
                         if (textureInfo.url instanceof Array) {
                             texture.load(textureInfo.url);
                         } else {
@@ -276,6 +306,9 @@ define(function (require) {
                         geometry: this._createGeometry(modelInfo),
                         material: lib.materialsMap[modelInfo.material]
                     });
+                    if (mesh.material.shader.isTextureEnabled('normalMap')) {
+                        mesh.geometry.generateTangents();
+                    }
 
                     if (modelInfo.castShadow != null) {
                         mesh.castShadow = modelInfo.castShadow;
@@ -353,13 +386,13 @@ define(function (require) {
             return clipLoaders;
         },
 
-        _createWorldOtherAfterLoad: function (config, lib, world) {
+        _createWorldOtherAfterLoad: function (config, lib, world, cb) {
 
             this._createLights(config.lights, lib);
 
             this._createCameras(config.cameras, lib);
 
-            this._createEntities(config.entities, lib);
+            this._createEntities(config.entities, lib, cb);
 
             if (config.graphic) {
                 this._appInstance.setGraphic(config.graphic);
@@ -375,10 +408,10 @@ define(function (require) {
             world.setMainCamera(config.mainCamera);
         },
 
-        _createPrefabOtherAfterLoad: function (config, lib, prefab) {
+        _createPrefabOtherAfterLoad: function (config, lib, prefab, cb) {
             this._createLights(config.lights, lib);
 
-            this._createEntities(config.entities, lib);
+            this._createEntities(config.entities, lib, cb);
 
             lib.entities.forEach(function (entity) {
                 prefab.addEntity(entity); 
@@ -506,24 +539,82 @@ define(function (require) {
             }
         },
 
-        _createEntities: function (entities, lib) {
+        _createEntities: function (entities, lib, cb) {
+            var count = 0;
             qtekUtil.each(entities, function (entityInfo) {
                 var sceneNode = lib.rootNode.queryNode(entityInfo.sceneNodePath);
                 if (sceneNode) {
                     var entity = new Entity(this._appInstance, sceneNode);
                     lib.entities.push(entity);
 
+                    // Set materials
+                    if (entityInfo.materials) {
+                        for (var i = 0; i < entityInfo.materials.length; i++) {
+                            var materialInfo = entityInfo.materials[i];
+                            var meshPath = materialInfo.meshPath;
+                            var mesh = sceneNode.queryNode(meshPath);
+                            if (mesh && mesh.material) {
+                                var material = mesh.material;
+
+                                var enabledTextures = material.shader.getEnabledTextures();
+                                var vertexDefines = qtekUtil.extend({}, material.shader.vertexDefines);
+                                qtekUtil.extend(vertexDefines, materialInfo.vertexDefines);
+                                var fragmentDefines = qtekUtil.extend({}, material.shader.fragmentDefines);
+                                qtekUtil.extend(fragmentDefines, materialInfo.fragmentDefines);
+
+                                for (var key in materialInfo.uniforms) {
+                                    var val = materialInfo.uniforms[key];
+                                    if (typeof(val) === 'string' && val.indexOf('#') === 0) {
+                                        // Is a texture
+                                        if (enabledTextures.indexOf(key) < 0) {
+                                            if (key === 'normalMap') {
+                                                mesh.geometry.generateTangents();
+                                            }
+                                            enabledTextures.push(key);
+                                        }
+                                    }
+                                }
+
+                                var shaderName = materialInfo.shader || 'buildin.physical';
+                                var shader = this._shaderLibrary.get(shaderName, {
+                                    textures: enabledTextures,
+                                    vertexDefines: vertexDefines,
+                                    fragmentDefines: fragmentDefines
+                                });
+
+                                if (shader) {
+                                    material.attachShader(shader, true);
+
+                                    for (var key in materialInfo.uniforms) {
+                                        var val = materialInfo.uniforms[key];
+                                        if (typeof(val) === 'string' && val.indexOf('#') === 0) {
+                                            material.set(key, lib.texturesMap[val.slice(1)]);
+                                        } else {
+                                            material.set(key, val);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                     // Create components;
                     if (entityInfo.components) {
                         for (var i = 0; i < entityInfo.components.length; i++) {
-                            var component = this._createComponent(entityInfo.components[i], entity, lib);
+                            count++;
+                            var component = this._createComponent(entityInfo.components[i], entity, lib, function () {
+                                count--;
+                                if (count === 0) {
+                                    setTimeout(cb);
+                                }
+                            });
                         }
                     }
                 }
             }, this);
         },
 
-        _createComponent: function (componentInfo, entity, lib) {
+        _createComponent: function (componentInfo, entity, lib, callback) {
             var component;
             var type = componentInfo.type || '';
             switch (type.toLowerCase()) {
@@ -537,12 +628,16 @@ define(function (require) {
                             component.setContext(context);
                             component.setParameters(componentInfo.parameters);
                             entity.addComponent(component);
+
+                            callback();
                         });
                     }
                     else if (componentInfo.context) {
                         component = new PluginComponent(entity, componentInfo.context);
                         component.setParameters(componentInfo.parameters);
                         entity.addComponent(component);
+
+                        callback();
                     }
                     break;
                 case 'animation':
@@ -557,6 +652,8 @@ define(function (require) {
                             component.autoPlayClip = clipInfo.name;
                         }
                     }, this);
+
+                    callback();
             }
         },
 
