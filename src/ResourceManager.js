@@ -15,6 +15,9 @@ define(function (require) {
     var Vector2 = require('qtek/math/Vector2');
     var Material = require('qtek/Material');
     var Shader = require('qtek/Shader');
+    
+    require('qtek/shader/buildin');
+
     var shaderLibrary = require('qtek/shader/library');
     var request = require('qtek/core/request');
 

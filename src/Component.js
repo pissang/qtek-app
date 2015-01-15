@@ -19,9 +19,6 @@ define(function (require) {
             return this._entity.getAppInstance();
         },
 
-        /**
-         * Initialize will be invoked when the component adding to entity
-         */
         $init: function () {},
 
         $frame: function (frameTime) {

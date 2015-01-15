@@ -27,7 +27,7 @@ define(function (require) {
             frame: function (entity) {
                 if (this._orbitControl) {
                     this._orbitControl._offsetRoll = this._stickY / 30;
-                    this._orbitControl._offsetPitch = -this._stickX / 15;
+                    this._orbitControl._offsetPitch = this._stickX / 15;
                     this._orbitControl._op = 0;
                     this._orbitControl.update(entity.getFrameTime());
                 }

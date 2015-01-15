@@ -33,9 +33,9 @@ define(function (require) {
                 this._applyOrientationChange(entity);
 
                 var world = entity.getWorld();
-                var forward = world.getMainCamera().worldTransform.forward.normalize().negate();
+                var forward = world.getMainCamera().worldTransform.z.normalize().negate();
                 forward.y = 0;
-                var right = world.getMainCamera().worldTransform.right.normalize();
+                var right = world.getMainCamera().worldTransform.x.normalize();
                 right.y = 0;
 
                 if (this.speed.x !== 0 || this.speed.y !== 0) {
@@ -101,16 +101,16 @@ define(function (require) {
                     var male = entity.getSceneNode();
                     var cameraWorldTransform = world.getMainCamera().worldTransform;
                     tmpM4.copy(cameraWorldTransform);
-                    var forward = cameraWorldTransform.forward.negate();
-                    var right = cameraWorldTransform.right.negate();
+                    var forward = cameraWorldTransform.z.negate();
+                    var right = cameraWorldTransform.x.negate();
                     forward.y = 0;
                     right.y = 0;
                     forward.normalize();
                     right.normalize();
 
-                    male.worldTransform.forward = forward;
-                    male.worldTransform.right = right;
-                    male.worldTransform.up = Vector3.UP;
+                    male.worldTransform.z = forward;
+                    male.worldTransform.x = right;
+                    male.worldTransform.y = Vector3.UP;
                     male.decomposeWorldTransform();
                     male.update(true);
 

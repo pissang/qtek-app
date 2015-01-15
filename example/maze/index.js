@@ -1,4 +1,6 @@
 define(function (require) {
+    var IP = '172.18.19.117';
+
     var App3D = require('qtek-app/App3D');
     var TaskGroup = require('qtek/async/TaskGroup');
     var qtekUtil = require('qtek/core/util');
@@ -13,15 +15,22 @@ define(function (require) {
         require('./house4.prefab'),
         require('./house5.prefab')
     ];
-    var generateMaze = require('./maze');
+    // var generateMaze = require('./maze');
+    var field = require('./maze2');
 
     var app = new App3D();
     app.init(document.getElementById('main'));
 
     app.physicsEngine = require('./physics');
-    app.on('frame', function (frameTime) {
-        app.physicsEngine.step(frameTime / 1000);
+
+    var time = Date.now();
+
+    app.physicsEngine.on('afterstep', function () {
+        var dTime = Date.now() - time;
+        app.physicsEngine.step(dTime / 1000);
+        time = Date.now();
     });
+    app.physicsEngine.step(0.1);
 
     // Load world from config file
     var world = app.loadWorld(worldConfig);
@@ -39,7 +48,8 @@ define(function (require) {
         });
         var task = new TaskGroup().allSettled(housePrefabs);
         task.success(function () {
-            var field = generateMaze(30);
+            // var field = generateMaze(30);
+            field.dimension = 30;
             var mePosition = [];
             // Create house maze
             for (var i = 0; i < field.dimension; i++) {
@@ -96,12 +106,15 @@ define(function (require) {
 
     function init(mePosition) {
 
-        var IP = '192.168.101.124';
         var socket = io.connect('http://' + IP + ':8888/');
+        // var socket = io.connect('http://dev052.baidu.com:8890');
 
         socket.on('connect_error', function () {
             console.log('连接服务器失败');
             socket.disconnect();
+
+            // Single player
+            app.start();
         });
         socket.on('connection-id', function (id) {
             console.log('connection id', id);
@@ -133,6 +146,7 @@ define(function (require) {
                 socket.emit('join', userData);
 
                 document.getElementById('qrcode').src = 'http://ishowshao.com/phpqrcode/index.php?data=' + encodeURIComponent('http://' + IP + '/gamma/demo-remote.html?gameId=' + userData.id);
+                // document.getElementById('qrcode').src = 'http://ishowshao.com/phpqrcode/index.php?data=' + encodeURIComponent('http://dev052.baidu.com:8890/demo-remote.html?gameId=' + userData.id);
                 // 
                 app.broadcastEntityEvent('userInit', userData);
 

@@ -13,11 +13,11 @@ define({
 
     cameras: [{
         name: 'mainCamera',
-        position: [0, 200, -200],
-        target: [0, 170, 0],
+        position: [0, 150, -300],
+        target: [0, 100, 0],
 
         parent: 'baseMale',
-        far: 5000
+        far: 4000
     }],
 
     skybox: {
