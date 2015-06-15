@@ -86,10 +86,10 @@ define(function (require) {
                     color : {
                         parameters : {
                             width : function(renderer) {
-                                return renderer.width;
+                                return renderer.getWidth();
                             },
                             height : function(renderer) {
-                                return renderer.height;
+                                return renderer.getHeight();
                             },
                             type : Texture.HALF_FLOAT
                         }

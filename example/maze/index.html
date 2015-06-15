@@ -13,6 +13,7 @@
         }
         body {
             margin: 0px;
+            overflow: hidden;
         }
         #qrcode {
             position: absolute;
@@ -21,11 +22,18 @@
             width: 100px;
             height: 100px;
         }
+        #qtek-logo {
+            position: absolute;
+            right: 30px;
+            bottom: 40px;
+            z-index: 10;
+        }
     </style>
 </head>
 <body>
     <div id="main"></div>
     <img id="qrcode" />
+    <img id="qtek-logo" src="../../qtek-logo.png" width="130"></img>
     <script src="../js/config.js"></script>
     <script>
     require(['index'], function () {});

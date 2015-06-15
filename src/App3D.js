@@ -134,7 +134,7 @@ define(function (require) {
                 if (scene && camera) {
                     this._currentWorld.$frame(frameTime);
                     // Adjust aspect dynamically
-                    camera.aspect = this._renderer.width / this._renderer.height;
+                    camera.aspect = this._renderer.getViewportAspect();
 
                     this._graphicManager.render(scene, camera);
                 }

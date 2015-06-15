@@ -32,8 +32,8 @@ define(function (require) {
     var CylinderGeo = require('qtek/geometry/Cylinder');
     var ConeGeo = require('qtek/geometry/Cone');
 
-    var Texture2D = require('qtek/texture/Texture2D');
-    var TextureCube = require('qtek/texture/TextureCube');
+    var Texture2D = require('qtek/Texture2D');
+    var TextureCube = require('qtek/TextureCube');
     var Texture = require('qtek/Texture');
     var textureUtil = require('qtek/util/texture');
 
